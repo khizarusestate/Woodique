@@ -16,12 +16,6 @@ export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden border-t border-[#A77A43]/30 bg-[#2B1B12] text-[#FFF1D8]">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -inset-6 scale-[1.04] bg-cover bg-center bg-no-repeat blur-[14px]"
-          style={{ backgroundImage: "url('/images/Home.png')", opacity: 0.16 }}
-          animate={reduce ? {} : { scale: [1.04, 1.08, 1.04], opacity: [.12, .19, .12] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        />
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(36,24,15,.96)_0%,rgba(45,30,18,.86)_52%,rgba(29,20,13,.96)_100%)]" />
         <motion.div animate={reduce ? {} : { x: [0, 45, -20, 0], y: [0, -20, 24, 0] }} transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }} className="absolute -right-32 -top-48 h-[430px] w-[430px] rounded-full bg-[#E9BD70]/[.13] blur-[115px]" />
         <motion.div animate={reduce ? {} : { x: [0, -35, 20, 0], y: [0, 20, -15, 0] }} transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-52 -left-32 h-[390px] w-[390px] rounded-full bg-[#503522]/[.16] blur-[110px]" />
