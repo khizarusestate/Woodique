@@ -34,7 +34,7 @@ function Jewel() {
     return (
         <motion.img
             src="./images/Home.png"
-            alt="Eman Jewelers signature diamond"
+            alt="Woodique wooden tray collection"
             onError={() => setFailed(true)}
             className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_24px_rgba(241,201,101,0.4)]"
             initial={{ opacity: 0, y: 18, scale: 0.92 }}
@@ -220,7 +220,7 @@ export default function Home() {
                     {/* ---------- Copy ---------- */}
                     <div className="relative z-10 mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
 
-                        {/* Compact jewel for small screens */}
+                        {/* Compact brand visual for small screens */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -292,9 +292,7 @@ export default function Home() {
                             transition={{ duration: 1, delay: 0.8, ease: EASE }}
                             className="mx-auto max-w-[30rem] text-sm leading-[1.9] text-[#B8ADA0] sm:text-[0.95rem] lg:mx-0"
                         >
-                            Discover jewellery that captures the extraordinary. Timeless
-                            elegance, exquisite details, and a golden touch crafted for
-                            your most unforgettable moments.
+                            Bring warmth to every gathering with thoughtfully crafted wooden tray sets. Natural textures, timeless design, and practical elegance for your home.
                         </motion.p>
 
                         {/* CTAs */}
