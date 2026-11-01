@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import {
     motion,
     useMotionValue,
@@ -18,32 +18,12 @@ import {
 
 const EASE = [0.16, 1, 0.3, 1];
 
-/* Signature image with graceful fallback if Home.png fails to load */
+/* Minimal brand mark; product imagery is intentionally omitted from the hero */
 function Jewel() {
-    const [failed, setFailed] = useState(false);
-
-    if (failed) {
-        return (
-            <Layers
-                strokeWidth={0.8}
-                className="relative z-10 h-1/2 w-1/2 text-[#F1C965] drop-shadow-[0_0_24px_rgba(241,201,101,0.5)]"
-            />
-        );
-    }
-
     return (
-        <motion.img
-            src="./images/Home.png"
-            alt="Woodique wooden tray set"
-            onError={() => setFailed(true)}
-            className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_24px_rgba(241,201,101,0.4)]"
-            initial={{ opacity: 0, y: 18, scale: 0.92 }}
-            animate={{ opacity: 1, y: [0, -7, 0, 5, 0], scale: [1, 1.015, 1] }}
-            transition={{
-                opacity: { duration: 1.2, ease: "easeOut" },
-                y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-                scale: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-            }}
+        <Layers
+            strokeWidth={0.8}
+            className="relative z-10 h-1/2 w-1/2 text-[#D9B98C]"
         />
     );
 }
@@ -126,17 +106,6 @@ export default function Home() {
         >
             {/* ================= Atmosphere ================= */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                {/* Blurred Home.png atmosphere, matching the footer background */}
-                <motion.div
-                    className="absolute -inset-6 scale-[1.04] bg-cover bg-center bg-no-repeat blur-[12px]"
-                    style={{
-                        backgroundImage: "url('/images/Home.png')",
-                        opacity: 0.28,
-                        mixBlendMode: "screen",
-                    }}
-                    animate={reduce ? {} : { scale: [1.04, 1.09, 1.04], opacity: [0.22, 0.31, 0.22] }}
-                    transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-                />
                 <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,4,3,0.88)_0%,rgba(5,4,3,0.72)_48%,rgba(5,4,3,0.84)_100%)]" />
                 <motion.div style={{ x: glowX, y: glowY }} className="absolute inset-0">
                     <motion.div
@@ -233,7 +202,7 @@ export default function Home() {
                         </motion.div>
 
                         <h1
-                            className="font-serif font-normal leading-[0.92] tracking-[-0.05em]"
+                            className="relative z-50 font-serif font-normal leading-[0.92] tracking-[-0.05em]"
                             style={{ fontSize: "clamp(2.45rem, min(6.6vw, 10.8vh), 6.1rem)" }}
                         >
                             <span className="block overflow-hidden pb-[0.06em]">
