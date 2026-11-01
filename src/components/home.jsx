@@ -34,7 +34,7 @@ function Jewel() {
     return (
         <motion.img
             src="./images/Home.png"
-            alt="Woodique wooden tray collection"
+            alt="Woodique wooden tray set"
             onError={() => setFailed(true)}
             className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_24px_rgba(241,201,101,0.4)]"
             initial={{ opacity: 0, y: 18, scale: 0.92 }}
@@ -292,7 +292,7 @@ export default function Home() {
                             transition={{ duration: 1, delay: 0.8, ease: EASE }}
                             className="mx-auto max-w-[30rem] text-sm leading-[1.9] text-[#B8ADA0] sm:text-[0.95rem] lg:mx-0"
                         >
-                            Bring warmth to every gathering with thoughtfully crafted wooden tray sets. Natural textures, timeless design, and practical elegance for your home.
+                            Discover thoughtfully designed wooden tray sets that bring natural warmth and effortless style to your home. Made for serving, hosting, and making everyday moments feel special.
                         </motion.p>
 
                         {/* CTAs */}
@@ -313,7 +313,7 @@ export default function Home() {
                                     animate={{ left: ["-50%", "150%"] }}
                                     transition={{ duration: 3.2, repeat: Infinity, repeatDelay: 2.8, ease: "easeInOut" }}
                                 />
-                                <span className="relative">Explore Collection</span>
+                                <span className="relative">Shop Tray Sets</span>
                                 <ArrowRight
                                     size={16}
                                     className="relative transition-transform duration-300 group-hover:translate-x-1"
@@ -326,7 +326,7 @@ export default function Home() {
                                 whileTap={{ scale: 0.97 }}
                                 className="group relative inline-flex min-h-[52px] items-center justify-center gap-3 rounded-sm border border-[#BB7B24]/45 bg-white/[0.015] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.16em] text-[#F1C965] backdrop-blur-sm transition-all duration-500 hover:border-[#F1C965]/80 hover:bg-[#F1C965]/[0.07] hover:shadow-[0_0_30px_rgba(241,201,101,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F1C965] sm:px-8"
                             >
-                                Our Story
+                                Our Craft
                                 <ArrowRight
                                     size={15}
                                     className="transition-transform duration-300 group-hover:translate-x-1"
@@ -343,12 +343,12 @@ export default function Home() {
                         >
                             <span className="flex items-center gap-2">
                                 <ShieldCheck size={15} className="text-[#CD9135]" />
-                                Quality &amp; Craftsmanship
+                                Thoughtful Craftsmanship
                             </span>
                             <span className="hidden h-4 w-px bg-[#BB7B24]/40 sm:block" />
                             <span className="flex items-center gap-2">
                                 <Crown size={15} className="text-[#CD9135]" />
-                                Timeless Design
+                                Made for Everyday Use
                             </span>
                         </motion.div>
                     </div>
@@ -481,7 +481,7 @@ export default function Home() {
                 transition={{ delay: 1.6, duration: 1 }}
                 className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 text-[#BB7B24]/80 transition-colors hover:text-[#FFF1B8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F1C965]"
             >
-                <span className="text-[9px] uppercase tracking-[0.3em]">Discover More</span>
+                <span className="text-[9px] uppercase tracking-[0.3em]">Explore the Collection</span>
                 <motion.span
                     animate={{ y: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
