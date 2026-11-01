@@ -27,7 +27,7 @@ export default function Contact({ onClose }) {
   const submit = (event) => {
     event.preventDefault();
     const text = [
-      "Hello Eman Jewelers,", "",
+      "Hello Woodique,", "",
       "I would like to make an enquiry.", "",
       `Name: ${form.name.trim()}`,
       `Phone: ${form.phone.trim()}`, "",
@@ -81,7 +81,7 @@ export default function Contact({ onClose }) {
 
           <div className="bg-[#F1EBDD] px-6 py-9 text-[#211A10] sm:px-10 sm:py-12 lg:px-14 lg:py-16">
             <div className="mb-9 border-b border-[#806D4D]/25 pb-6">
-              <p className="mb-2 text-[8px] uppercase tracking-[.3em] text-[#9B743A]">Eman Jewelers · Correspondence</p>
+              <p className="mb-2 text-[8px] uppercase tracking-[.3em] text-[#9B743A]">Woodique · Correspondence</p>
               <h3 className="font-serif text-[30px] font-normal tracking-[-.02em] text-[#211A10]">Send an enquiry</h3>
               <p className="mt-2 text-[11px] leading-6 text-[#887D69]">Complete the details below and continue securely in WhatsApp.</p>
             </div>
