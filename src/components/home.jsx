@@ -10,10 +10,10 @@ import {
 import {
     ArrowDown,
     ArrowRight,
-    Sparkles,
-    Gem,
-    ShieldCheck,
-    Crown,
+    Leaf,
+    Layers,
+    Hammer,
+    Utensils,
 } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -24,7 +24,7 @@ function Jewel() {
 
     if (failed) {
         return (
-            <Gem
+            <Layers
                 strokeWidth={0.8}
                 className="relative z-10 h-1/2 w-1/2 text-[#F1C965] drop-shadow-[0_0_24px_rgba(241,201,101,0.5)]"
             />
@@ -277,7 +277,7 @@ export default function Home() {
                             className="mx-auto my-[3.2vh] flex max-w-[280px] origin-center items-center gap-4 lg:mx-0 lg:origin-left"
                         >
                             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#BB7B24]" />
-                            <Gem
+                            <Layers
                                 size={17}
                                 strokeWidth={1.3}
                                 className="shrink-0 text-[#F1C965] drop-shadow-[0_0_10px_rgba(241,201,101,0.8)]"
@@ -342,12 +342,12 @@ export default function Home() {
                             className="mt-[4.5vh] flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-[0.14em] text-[#A99A83] sm:gap-x-8 lg:justify-start"
                         >
                             <span className="flex items-center gap-2">
-                                <ShieldCheck size={15} className="text-[#CD9135]" />
+                                <Hammer size={15} className="text-[#CD9135]" />
                                 Thoughtful Craftsmanship
                             </span>
                             <span className="hidden h-4 w-px bg-[#BB7B24]/40 sm:block" />
                             <span className="flex items-center gap-2">
-                                <Crown size={15} className="text-[#CD9135]" />
+                                <Utensils size={15} className="text-[#CD9135]" />
                                 Made for Everyday Use
                             </span>
                         </motion.div>
@@ -463,7 +463,7 @@ export default function Home() {
                                 animate={{ opacity: [0.15, 1, 0.2], scale: [0.6, 1.3, 0.6], rotate: [0, 90, 180] }}
                                 transition={{ duration: 3 + i, delay: s.delay, repeat: Infinity, ease: "easeInOut" }}
                             >
-                                <Sparkles
+                                <Leaf
                                     size={s.size}
                                     className="text-[#FFF1B8] drop-shadow-[0_0_12px_rgba(241,201,101,0.9)]"
                                 />
