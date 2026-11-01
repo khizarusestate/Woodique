@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import About from "./components/about";
 import Collection from "./components/Collection";
 import Home from "./components/home";
 import Nav from "./components/nav";
 import Footer from "./components/Footer";
-import Preloader from "./components/preloader";
 import AuthPage from "./pages/AuthPage";
 import Account from "./pages/Account";
 import ProductDetails from "./pages/ProductDetails";
@@ -21,8 +20,6 @@ const isKnownRoute = pathname => ROUTES.has(pathname) || /^\/product\/[a-f0-9]{2
 
 function AppContent() {
   const [path, setPath] = useState(() => normalizePath(window.location.pathname));
-  const [loading, setLoading] = useState(true);
-  const transitionTimer = useRef(null);
   useEffect(() => {
     const baseUrl = "https://woodique.vercel.app";
     const routeMeta = {
@@ -64,17 +61,8 @@ function AppContent() {
 
 
   useEffect(() => {
-    transitionTimer.current = window.setTimeout(() => setLoading(false), 1750);
-    return () => window.clearTimeout(transitionTimer.current);
-  }, []);
-
-  useEffect(() => {
-    const finishTransition = (delay, hash = "") => {
-      window.clearTimeout(transitionTimer.current);
-      transitionTimer.current = window.setTimeout(() => {
-        setLoading(false);
-        if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, delay);
+    const finishTransition = (hash = "") => {
+      if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     const handleNavigation = event => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -89,9 +77,8 @@ function AppContent() {
       window.history.pushState({}, "", destination.pathname + destination.search + destination.hash);
       setPath(nextPath);
       if (nextPath !== path) {
-        setLoading(true);
         window.scrollTo({ top: 0, behavior: "instant" });
-        finishTransition(850, destination.hash);
+        finishTransition(destination.hash);
       } else if (destination.hash) {
         document.getElementById(decodeURIComponent(destination.hash.slice(1)))?.scrollIntoView({ behavior: "smooth" });
       }
@@ -101,9 +88,8 @@ function AppContent() {
       if (!isKnownRoute(nextPath)) return;
       setPath(nextPath);
       if (nextPath !== path) {
-        setLoading(true);
         window.scrollTo({ top: 0, behavior: "instant" });
-        finishTransition(750, window.location.hash);
+        finishTransition(window.location.hash);
       }
     };
     document.addEventListener("click", handleNavigation);
@@ -121,7 +107,6 @@ function AppContent() {
     <Nav />
     {page}
     <Footer />
-    <Preloader visible={loading} />
   </>;
 }
 
