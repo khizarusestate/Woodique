@@ -89,9 +89,9 @@ export default function Nav() {
         { name: "Contact", href: "/#contact" }
     ];
 
-    const textCss = "relative inline-block bg-gradient-to-b from-[#FFF1B8] via-[#F1C965] to-[#BB7B24] bg-clip-text text-transparent font-semibold tracking-wide cursor-pointer drop-shadow-[0_1px_2px_rgba(187,123,36,0.4)] transition-all duration-500 ease-out hover:-translate-y-1 hover:brightness-125 hover:drop-shadow-[0_0_12px_rgba(241,201,101,0.65)] after:content-[''] after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:rounded-full after:bg-gradient-to-r after:from-[#BB7B24] after:via-[#FFF1B8] after:to-[#BB7B24] after:shadow-[0_0_8px_rgba(241,201,101,0.55)] after:transition-all after:duration-500 after:ease-out hover:after:w-full ";
+    const textCss = "relative inline-block cursor-pointer text-[13px] font-medium tracking-wide text-[#F3E6D2] transition-colors duration-300 hover:text-[#E9BD70] after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-[#E9BD70] after:transition-all after:duration-300 hover:after:w-full";
 
-    const iconCss = "text-[#F1C965] transition-all duration-500 hover:text-[#FFF1B8] hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_10px_rgba(241,201,101,0.8)]";
+    const iconCss = "text-[#E9BD70] transition-all duration-300 hover:-translate-y-0.5 hover:text-[#FFF1D8]";
 
     return (
         <>
@@ -139,25 +139,19 @@ export default function Nav() {
             <motion.header
                 animate={{ y: mobileOpen ? "-110%" : "0%" }}
                 transition={{ duration: 0.55, ease: EASE }}
-                className={`${mobileOpen ? "hidden lg:block" : ""} fixed inset-x-0 top-0 z-50 w-full border-b backdrop-saturate-150 transition-[background-color,border-color,backdrop-filter] duration-500 ${scrolled || mobileOpen ? "border-[#D7B36B]/30 bg-[#080705]/92 shadow-[0_12px_40px_rgba(0,0,0,0.38)] backdrop-blur-2xl" : "border-[#D7B36B]/15 bg-[#080705]/72 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur-xl"}` }
+                className={`${mobileOpen ? "hidden lg:block" : ""} fixed inset-x-0 top-0 z-50 w-full border-b border-[#E9BD70]/25 bg-[#392719]/90 shadow-[0_8px_28px_rgba(25,15,8,0.22)] backdrop-blur-xl transition-colors duration-300` }
             >
-                <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-                    <div className="absolute -inset-8 bg-cover bg-center opacity-[0.10] blur-2xl" style={{backgroundImage:"url(/images/Home.png)"}} />
-                    <motion.div className="absolute -left-20 -top-28 h-64 w-64 rounded-full bg-[#A76A16]/20 blur-[90px]" animate={{x:[0,45,-10,0],y:[0,18,-12,0],opacity:[0.25,0.7,0.25]}} transition={{duration:18,repeat:Infinity,ease:"easeInOut"}} />
-                    <motion.div className="absolute -right-16 -top-28 h-64 w-64 rounded-full bg-[#F1C965]/15 blur-[95px]" animate={{x:[0,-35,12,0],y:[0,20,-10,0],opacity:[0.2,0.65,0.2]}} transition={{duration:21,repeat:Infinity,ease:"easeInOut"}} />
-                    {Array.from({length:22},(_,i)=><motion.i key={i} className="absolute h-[2px] w-[2px] rounded-full bg-[#F1C965] shadow-[0_0_8px_2px_rgba(241,201,101,0.4)]" style={{left:((i*43)%100)+"%",top:((i*61)%100)+"%"}} animate={{y:[0,-15,0],opacity:[0.1,0.8,0.1],scale:[0.7,1.3,0.7]}} transition={{duration:5+i%5,delay:i%7,repeat:Infinity,ease:"easeInOut"}} />)}
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#080705]/65 via-[#080705]/55 to-[#080705]/80" />
-                </div>
+                <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,rgba(43,27,18,0.97),rgba(66,43,28,0.94)_55%,rgba(80,53,34,0.96))]" />
 
                 {/* Main Navbar */}
-                <nav className="relative z-10 mx-auto flex h-[75px] max-w-[1450px] items-center justify-between px-6 nav-enter before:pointer-events-none before:absolute before:inset-x-6 before:bottom-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[#D7B36B]/20 before:to-transparent lg:px-12">
+                <nav className="relative z-10 mx-auto flex h-[75px] max-w-[1450px] items-center justify-between px-6 lg:px-12">
 
                     {/* Logo */}
-                    <a href="/" aria-label="Eman Jewelers home" className="group relative shrink-0">
+                    <a href="/" aria-label="Woodique home" className="group relative shrink-0">
                         <img
                             src="/images/Logo.png"
-                            alt="Eman Jewelers"
-                            className="h-[62px] w-auto object-contain transition-all duration-700 group-hover:scale-[1.04] group-hover:drop-shadow-[0_0_18px_rgba(241,201,101,0.5)] lg:h-[66px]"
+                            alt="Woodique"
+                            className="h-[58px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] lg:h-[64px]"
                         />
                     </a>
 
@@ -179,7 +173,7 @@ export default function Nav() {
                         </ul>
 
                         {/* Divider */}
-                        <div className="h-7 w-px bg-gradient-to-b from-transparent via-[#BB7B24]/70 to-transparent" />
+                        <div className="h-7 w-px bg-[#E9BD70]/35" />
 
                         {/* Action Icons */}
                         <div className="flex items-center gap-7">
@@ -202,7 +196,7 @@ export default function Nav() {
                                     <button type="button" aria-label="Sign out" title="Sign out" onClick={async () => { try { await logout(); toast("You have been signed out.", "success"); } catch (error) { toast(error.message, "error"); } }} className={iconCss}><LogOut size={20} strokeWidth={1.6} /></button>
                                 </>
                             ) : (
-                                <div className="flex items-center gap-3"><a href="/login" className="text-[10px] font-semibold uppercase tracking-[.16em] text-[#D8C08E] transition hover:text-white">Login</a><a href="/register" className="rounded-full border border-[#D7B36B]/55 bg-gradient-to-r from-[#F1C965]/10 to-[#BB7B24]/10 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#F1C965] shadow-[0_0_18px_rgba(241,201,101,0.08)] transition-all duration-500 hover:border-[#F1C965] hover:bg-[#F1C965]/15">Join Us</a></div>
+                                <div className="flex items-center gap-3"><a href="/login" className="text-[10px] font-semibold uppercase tracking-[.16em] text-[#D8C08E] transition hover:text-white">Login</a><a href="/register" className="rounded-full border border-[#E9BD70]/60 bg-[#E9BD70] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#2B1B12] transition-colors duration-300 hover:bg-[#F5D69D]">Join Us</a></div>
                             )}
                         </div>
                     </div>
@@ -253,7 +247,7 @@ export default function Nav() {
                                 type="search"
                                 value={searchQuery}
                                 onChange={event => setSearchQuery(event.target.value)}
-                                placeholder="Search by name, category or detail..."
+                                placeholder="Search tray sets..."
                                 className="w-full bg-transparent outline-none text-[#F1C965] placeholder:text-[#BB7B24]/60"
                             />
 
@@ -269,8 +263,8 @@ export default function Nav() {
                     {searchQuery.trim() && <div className="max-w-[1450px] mx-auto px-6 lg:px-12 pb-4">
                         <div className="overflow-hidden rounded-xl border border-[#BB7B24]/30 bg-[#100D08]/95 shadow-xl backdrop-blur-xl">
                             {searchResults.length ? searchResults.map(product => <a key={product.id} href={"/product/" + product.id} onClick={() => { setSearchOpen(false); setSearchQuery(""); }} className="flex items-center justify-between border-b border-[#D7B36B]/10 px-5 py-3 text-sm text-[#FFF1B8] last:border-0 hover:bg-[#F1C965]/10">
-                                <span>{product.name}<small className="ml-3 text-[10px] uppercase tracking-widest text-[#BCA477]">{product.category || "Jewellery"}</small></span><ArrowUpRight size={16} className="text-[#D7B36B]" />
-                            </a>) : <p className="px-5 py-4 text-center text-xs text-[#BCA477]">No matching jewellery found.</p>}
+                                <span>{product.name}<small className="ml-3 text-[10px] uppercase tracking-widest text-[#BCA477]">{product.category || "Tray Set"}</small></span><ArrowUpRight size={16} className="text-[#D7B36B]" />
+                            </a>) : <p className="px-5 py-4 text-center text-xs text-[#BCA477]">No matching products found.</p>}
                         </div>
                     </div>}
                     </>
@@ -299,17 +293,17 @@ export default function Nav() {
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ duration: 0.42, ease: EASE }}
-                            className="absolute inset-y-0 left-0 flex w-[78vw] max-w-[320px] flex-col overflow-y-auto rounded-br-[100px] border-r border-[#D7B36B]/30 bg-[#080705] shadow-[18px_0_55px_rgba(0,0,0,0.45)]"
+                            className="absolute inset-y-0 left-0 flex w-[78vw] max-w-[320px] flex-col overflow-y-auto rounded-br-[100px] border-r border-[#D7B36B]/30 bg-[#392719] shadow-[18px_0_55px_rgba(0,0,0,0.45)]"
                         >
                             <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-                                <div className="absolute -inset-8 scale-105 bg-cover bg-center opacity-20 blur-[12px]" style={{ backgroundImage: "url('/images/Home.png')" }} />
+                                <div className="absolute -inset-8 scale-105 bg-cover bg-center opacity-20 blur-[12px]"  />
                                 <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(8,7,5,0.72),rgba(8,7,5,0.94)_70%,rgba(22,14,5,0.98))]" />
-                                <div className="absolute -right-28 bottom-[5%] h-72 w-72 rounded-full bg-[#F1C965]/15 blur-[90px]" />
+                                <div className="absolute -right-28 bottom-[5%] h-72 w-72 rounded-full bg-[#E9BD70]/10 blur-[90px]" />
                             </div>
                             <div className="relative flex min-h-full flex-col px-6 pb-8 pt-7">
                                 <div className="mb-8 flex items-center justify-between gap-3 border-b border-[#D7B36B]/25 pb-5">
-                                    <a href="/" onClick={closeMenu} aria-label="Eman Jewelers home" className="flex min-w-0 items-center gap-3">
-                                        <img src="/images/Logo.png" alt="Eman Jewelers logo" className="h-11 w-11 shrink-0 rounded-full border border-[#D7B36B]/40 object-contain p-1" />
+                                    <a href="/" onClick={closeMenu} aria-label="Woodique home" className="flex min-w-0 items-center gap-3">
+                                        <img src="/images/Logo.png" alt="Woodique logo" className="h-11 w-11 shrink-0 rounded-full border border-[#D7B36B]/40 object-contain p-1" />
                                     </a>
                                     <button type="button" onClick={closeMenu} aria-label="Close menu" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#D7B36B]/30 text-[#F1C965] transition hover:border-[#F1C965]/70 hover:bg-[#F1C965]/10 hover:text-[#FFF1B8]"><X size={18} strokeWidth={1.7} /></button>
                                 </div>
@@ -325,7 +319,7 @@ export default function Nav() {
                                 </motion.ul>
 
                                 <div className="relative mt-6 flex flex-col items-start gap-4 text-[11px] tracking-wide text-[#BCA477]">
-                                    <button type="button" onClick={() => { setSearchOpen(true); closeMenu(); }} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><Search size={17} strokeWidth={1.6} />Search jewellery</button>
+                                    <button type="button" onClick={() => { setSearchOpen(true); closeMenu(); }} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><Search size={17} strokeWidth={1.6} />Search products</button>
                                     <a href="/wishlist" onClick={closeMenu} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><Heart size={17} strokeWidth={1.6} />Wishlist{wishlist.length > 0 && <span className="rounded-full bg-[#F1C965]/15 px-2 py-0.5 text-[9px] text-[#F1C965]">{wishlist.length}</span>}</a>
                                     <a href="/cart" onClick={closeMenu} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><ShoppingBag size={17} strokeWidth={1.6} />Shopping bag{cartCount > 0 && <span className="rounded-full bg-[#F1C965]/15 px-2 py-0.5 text-[9px] text-[#F1C965]">{cartCount}</span>}</a>
                                     {isAuthenticated ? <><a href="/account" onClick={closeMenu} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><UserRound size={17} strokeWidth={1.6} />My account</a><button type="button" onClick={async () => { try { await logout(); toast("You have been signed out.", "success"); closeMenu(); } catch (error) { toast(error.message, "error"); } }} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><LogOut size={17} strokeWidth={1.6} />Sign out</button></> : <><a href="/login" onClick={closeMenu} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><UserRound size={17} strokeWidth={1.6} />Login</a><a href="/register" onClick={closeMenu} className="flex items-center gap-3 transition hover:text-[#FFF1B8]"><ArrowUpRight size={17} strokeWidth={1.6} />Join Us</a></>}
@@ -333,7 +327,7 @@ export default function Nav() {
 
                                 <div className="relative mt-auto pt-10">
                                     <div className="mb-3 h-px w-16 bg-gradient-to-r from-[#F1C965]/70 to-transparent" />
-                                    <p className="font-serif text-sm text-[#CD9135]">Fine gold & diamonds</p>
+                                    <p className="font-serif text-sm text-[#CD9135]">Crafted for everyday living</p>
                                 </div>
                             </div>
                         </motion.aside>
