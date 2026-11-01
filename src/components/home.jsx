@@ -243,7 +243,7 @@ export default function Home() {
                                     transition={{ duration: 1.2, delay: 0.1, ease: EASE }}
                                     className="block origin-left text-[#FFF9EA]"
                                 >
-                                    Timeless
+                                    Crafted for
                                 </motion.span>
                             </span>
 
@@ -264,7 +264,7 @@ export default function Home() {
                                         WebkitBackgroundClip: "text",
                                     }}
                                 >
-                                    Radiance.
+                                    Everyday Living.
                                 </motion.span>
                             </span>
                         </h1>
