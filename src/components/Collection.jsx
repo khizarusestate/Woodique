@@ -32,9 +32,9 @@ export default function Collection() {
       <div className="pointer-events-none absolute -right-40 top-[38%] h-96 w-96 rounded-full bg-[#B98536]/10 blur-[110px]" />
       <div className="relative mx-auto max-w-[1480px] px-5 pb-20 pt-24 sm:px-8 sm:pb-28 sm:pt-32 lg:px-14">
         <motion.div initial={reduceMotion ? false : { opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8, ease }} className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
-          <p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-[#9A773F] sm:text-xs">Made to be treasured</p>
-          <h2 className="font-serif text-4xl leading-[1.05] tracking-[-0.04em] sm:text-6xl lg:text-7xl">Discover your <span className="bg-gradient-to-r from-[#805018] via-[#C99A45] to-[#9C6A25] bg-clip-text italic text-transparent">signature.</span></h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#777064] sm:text-base">Thoughtfully chosen pieces for the everyday, the unforgettable, and everything in between.</p>
+          <p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-[#9A773F] sm:text-xs">Made for everyday moments</p>
+          <h2 className="font-serif text-4xl leading-[1.05] tracking-[-0.04em] sm:text-6xl lg:text-7xl">Discover your <span className="bg-gradient-to-r from-[#805018] via-[#C99A45] to-[#9C6A25] bg-clip-text italic text-transparent">wooden favourite.</span></h2>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#777064] sm:text-base">Thoughtfully crafted wooden tray sets for serving, hosting, gifting and everyday living.</p>
         </motion.div>
 
         <div className="mb-8 flex flex-col gap-4 border-y border-[#B98536]/25 py-4 sm:mb-10 sm:flex-row sm:items-center sm:justify-between">
@@ -45,7 +45,7 @@ export default function Collection() {
         </div>
 
         <div className="mb-4 flex items-center justify-end gap-2 text-[10px] uppercase tracking-[0.12em] text-[#82796B]"><ShoppingBag size={13} /> <a href="/cart" className="underline underline-offset-4">Bag: {cartCount} {cartCount === 1 ? "item" : "items"}</a></div>
-        {loading && <p className="py-10 text-center text-sm text-[#82796B]">Loading the latest collection…</p>}{error && <div className="my-6 border border-rose-300/50 bg-white/60 p-5 text-center text-sm text-[#8A4038]">{error}<button type="button" onClick={refresh} className="ml-3 underline">Try again</button></div>}{!loading && !error && products.length === 0 && <div className="border-y border-[#B98536]/25 bg-white/35 px-6 py-16 text-center"><p className="text-[10px] uppercase tracking-[0.25em] text-[#9A773F]">A new collection is on its way</p><h3 className="mt-3 font-serif text-3xl">Our pieces will be here soon.</h3><p className="mx-auto mt-3 max-w-md text-sm leading-7 text-[#777064]">We are preparing the Eman Jewelers collection. Please check back soon for available pieces.</p></div>}
+        {loading && <p className="py-10 text-center text-sm text-[#82796B]">Loading the latest collection…</p>}{error && <div className="my-6 border border-rose-300/50 bg-white/60 p-5 text-center text-sm text-[#8A4038]">{error}<button type="button" onClick={refresh} className="ml-3 underline">Try again</button></div>}{!loading && !error && products.length === 0 && <div className="border-y border-[#B98536]/25 bg-white/35 px-6 py-16 text-center"><p className="text-[10px] uppercase tracking-[0.25em] text-[#9A773F]">A new collection is on its way</p><h3 className="mt-3 font-serif text-3xl">Our pieces will be here soon.</h3><p className="mx-auto mt-3 max-w-md text-sm leading-7 text-[#777064]">We are preparing the Woodique collection. Please check back soon for available wooden tray sets.</p></div>}
         <motion.div layout className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-5 sm:gap-y-10 lg:grid-cols-4 lg:gap-x-6">
           <AnimatePresence mode="popLayout">
             {shown.map((product, index) => <motion.article layout key={product.id} initial={reduceMotion ? false : { opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }} transition={{ duration: 0.45, delay: reduceMotion ? 0 : index * 0.045, ease }} className="group min-w-0">
@@ -69,7 +69,7 @@ export default function Collection() {
               </div>
               <div className="w-full pt-4 text-left sm:pt-5">
                 <div className="mb-1.5 flex items-start justify-between gap-2"><h3 className="font-serif text-[15px] leading-snug sm:text-lg">{product.name}</h3><span className="mt-1 hidden text-[8px] uppercase tracking-[0.14em] text-[#9B7B46] sm:inline">{product.category}</span></div>
-                <p className="text-[11px] leading-5 text-[#82796B] sm:text-xs">A timeless accent, thoughtfully chosen for you.</p>
+                <p className="text-[11px] leading-5 text-[#82796B] sm:text-xs">A functional wooden accent, thoughtfully made for your home.</p>
                 <div className="mt-3"><span className="text-xs font-semibold tracking-wide text-[#5D411D] sm:text-sm">{formatPrice(product.price)}</span></div>
               </div>
             </motion.article>)}
