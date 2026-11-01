@@ -91,7 +91,7 @@ export default function Home() {
     /* ---------- Gold dust ---------- */
     const particles = useMemo(
         () =>
-            Array.from({ length: reduce ? 18 : 55 }, (_, i) => ({
+            Array.from({ length: reduce ? 12 : 36 }, (_, i) => ({
                 id: i,
                 left: `${(i * 37.7) % 100}%`,
                 top: `${(i * 61.3) % 100}%`,
@@ -167,11 +167,11 @@ export default function Home() {
                             width: p.size,
                             height: p.size,
                             background:
-                                p.id % 5 === 0 ? "#FFF1B8" : p.id % 3 === 0 ? "#F1C965" : "#BB7B24",
+                                p.id % 5 === 0 ? "#D9B98C" : p.id % 3 === 0 ? "#B98A58" : "#806044",
                             boxShadow:
                                 p.id % 5 === 0
-                                    ? "0 0 7px 2px rgba(255,241,184,0.8), 0 0 20px 5px rgba(241,201,101,0.3)"
-                                    : "0 0 8px 2px rgba(241,201,101,0.45), 0 0 18px rgba(187,123,36,0.2)",
+                                    ? "0 0 5px 1px rgba(217,185,140,0.45), 0 0 12px 3px rgba(185,138,88,0.18)"
+                                    : "0 0 5px 1px rgba(185,138,88,0.28), 0 0 12px rgba(128,96,68,0.14)",
                         }}
                         animate={
                             reduce
@@ -214,7 +214,7 @@ export default function Home() {
  
 
             {/* ================= Hero ================= */}
-            <section className="relative z-10 mx-auto flex h-full max-w-[1450px] items-center px-6 pb-[7vh] pt-[calc(3vh+75px)] sm:px-10 lg:px-16">
+            <section className="relative z-10 mx-auto flex h-full max-w-[1450px] items-center px-6 pb-[10vh] pt-[calc(3vh+75px)] sm:px-10 lg:px-16">
                 <div className="grid w-full items-center gap-[4vh] lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
 
                     {/* ---------- Copy ---------- */}
