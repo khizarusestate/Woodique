@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Leaf, Layers, Hammer, PackageCheck, HeartHandshake } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Leaf, Layers, Hammer, Utensils, PackageCheck, HeartHandshake } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1];
 const values = [
   { number: "01", Icon: Leaf, title: "Natural by design", copy: "Warm wood tones and thoughtful forms bring a calm, welcoming feel to everyday spaces." },
   { number: "02", Icon: Hammer, title: "Made with care", copy: "We value considered details, practical design and pieces that feel at home in daily use." },
-  { number: "03", Icon: HeartHandshake, title: "Chosen for living", copy: "From serving guests to organising your space, our tray sets make ordinary moments feel special." },
+  { number: "03", Icon: HeartHandshake, title: "Chosen for living", copy: "From serving guests to organising your space, our tray sets are selected to make ordinary moments feel special." },
 ];
 
 function Eyebrow({ children }) {
-  return <div className="mb-5 flex items-center gap-3 text-[10px] font-medium uppercase tracking-[.3em] text-[#D9B477]"><span className="h-px w-8 bg-current" />{children}</div>;
+  return <div className="mb-5 flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.3em] text-[#D9B477]"><span className="h-px w-8 bg-current" />{children}</div>;
 }
 
 export default function About() {
@@ -20,7 +20,6 @@ export default function About() {
   return (
     <main className="relative overflow-hidden bg-[#392719] text-[#FFF1D8] selection:bg-[#E9BD70] selection:text-[#2B1B12]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[760px] bg-[linear-gradient(110deg,#2B1B12_0%,#422B1C_55%,#503522_100%)]" />
-
       <section className="relative mx-auto grid min-h-[760px] max-w-[1500px] items-center gap-10 px-6 pb-20 pt-32 sm:px-10 lg:min-h-[820px] lg:grid-cols-[.95fr_1.05fr] lg:gap-16 lg:px-16 lg:pt-36">
         <motion.div initial={reduce ? false : { opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, ease: EASE }} className="relative z-10 order-2 lg:order-1">
           <Eyebrow>Our world · Woodique</Eyebrow>
@@ -35,9 +34,7 @@ export default function About() {
             <p className="text-[10px] uppercase leading-5 tracking-[.2em] text-[#D8C5AD]">Thoughtful by design<span className="block text-[#FFF1D8]">Made for everyday living</span></p>
           </div>
         </motion.div>
-
         <motion.div initial={reduce ? false : { opacity: 0, y: 18, scale: .97 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 1, ease: EASE, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[680px] lg:order-2">
-          <div className="absolute -right-2 top-8 h-[72%] w-[72%] border border-[#E9BD70]/20 sm:right-0" />
           <div className="relative ml-auto aspect-[.9] w-[90%] overflow-hidden rounded-[2px] border border-[#E9BD70]/20 bg-[#2B1B12]/50 p-5 shadow-[0_35px_90px_rgba(20,12,6,.35)] sm:w-[78%] sm:p-8">
             <img src="/images/Home.png" alt="Woodique wooden tray set" fetchPriority="high" className="h-full w-full object-contain" />
             <div className="pointer-events-none absolute inset-3 border border-[#E9BD70]/20 sm:inset-5" />
@@ -50,27 +47,6 @@ export default function About() {
       </section>
 
       <section className="relative border-y border-[#E9BD70]/15 bg-[#2F2016]">
-        <div className="mx-auto grid max-w-[1500px] items-center gap-12 px-6 py-20 sm:px-10 md:py-28 lg:grid-cols-[.8fr_1.2fr] lg:gap-20 lg:px-16 lg:py-32">
-          <div>
-            <Eyebrow>Made for the everyday</Eyebrow>
-            <h2 className="font-serif text-3xl leading-tight text-[#E9BD70] sm:text-4xl">A closer look at the little details.</h2>
-            <p className="mt-6 max-w-md text-sm leading-7 text-[#D8C5AD]">A good tray brings form and function together. It makes serving feel considered, keeps essentials close and adds a natural accent to your space.</p>
-          </div>
-          <div className="relative grid grid-cols-[1.15fr_.85fr] items-end gap-4 sm:gap-6">
-            <figure className="relative overflow-hidden border border-[#E9BD70]/20 bg-[#24170F] p-3 sm:p-5">
-              <img src="/images/Home.png" alt="Woodique tray set styled as a homeware piece" loading="lazy" className="aspect-[.95] w-full object-contain transition-transform duration-700 hover:scale-[1.035]" />
-              <figcaption className="mt-3 text-[8px] uppercase tracking-[.2em] text-[#D9B879] sm:text-[9px]">Thoughtful form</figcaption>
-            </figure>
-            <figure className="relative mb-8 overflow-hidden border border-[#E9BD70]/20 bg-[#3B291C] p-3 sm:mb-12 sm:p-5">
-              <img src="/images/Home.png" alt="Woodique wooden serving tray set" loading="lazy" className="aspect-[.78] w-full object-contain transition-transform duration-700 hover:scale-[1.035]" />
-              <figcaption className="mt-3 text-[8px] uppercase tracking-[.2em] text-[#D9B879] sm:text-[9px]">Made for living</figcaption>
-            </figure>
-            <div className="pointer-events-none absolute -inset-3 -z-0 border border-[#E9BD70]/10" />
-          </div>
-        </div>
-      </section>
-
-      <section className="relative border-b border-[#E9BD70]/15 bg-[#392719]">
         <div className="mx-auto grid max-w-[1500px] gap-10 px-6 py-20 sm:px-10 md:py-28 lg:grid-cols-[.7fr_1.3fr] lg:gap-20 lg:px-16 lg:py-32">
           <div><Eyebrow>The heart of Woodique</Eyebrow><p className="font-serif text-3xl leading-tight text-[#E9BD70] sm:text-4xl">Designed for the moments that make a home.</p></div>
           <div><p className="font-serif text-[clamp(1.45rem,2.8vw,2.7rem)] leading-[1.2] tracking-[-.035em] text-[#FFF1D8]">We see a tray as <span className="italic text-[#E9BD70]">more than an accessory.</span> It helps bring things together — from a relaxed breakfast to a table set for guests.</p><p className="mt-7 max-w-2xl text-sm leading-7 text-[#D8C5AD]">That belief shapes our approach: natural materials, useful forms and details that complement the spaces you live in.</p></div>
