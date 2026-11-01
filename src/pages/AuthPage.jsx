@@ -20,7 +20,7 @@ export default function AuthPage({ mode = "login" }) {
     setBusy(true);
     try {
       await request(`/api/auth/${isRegister ? "register" : "login"}`, { method: "POST", body: JSON.stringify(form) });
-      toast(isRegister ? "Your account has been created. Welcome to Eman Jewelers." : "Welcome back. You are now signed in.", "success");
+      toast(isRegister ? "Your account has been created. Welcome to Woodique." : "Welcome back. You are now signed in.", "success");
       window.history.pushState({}, "", "/account");
       window.dispatchEvent(new PopStateEvent("popstate"));
     } catch (error) {
@@ -60,12 +60,12 @@ export default function AuthPage({ mode = "login" }) {
           </a>
           <div className="relative">
             <span className="mb-6 block h-px w-12 bg-[#C39A52]" />
-            <p className="mb-5 text-[9px] uppercase tracking-[.38em] text-[#B18A4A]">The Eman experience</p>
+            <p className="mb-5 text-[9px] uppercase tracking-[.38em] text-[#B18A4A]">The Woodique experience</p>
             <h1 className="max-w-sm font-serif text-[54px] font-normal leading-[1.08] tracking-[-.035em] text-[#F8F0E1]">
               {isRegister ? <>A world of<br /><i className="font-normal text-[#D8B879]">personal elegance.</i></> : <>Elegance,<br /><i className="font-normal text-[#D8B879]">remembered.</i></>}
             </h1>
             <p className="mt-7 max-w-[270px] text-[12px] leading-7 tracking-[.04em] text-[#A99C85]">
-              {isRegister ? "Create your private account and keep your Eman Jewelers experience close." : "Your personal space for a considered and effortless jewellery experience."}
+              {isRegister ? "Create your private account and keep your Woodique experience close." : "Your personal space for a considered and effortless shopping experience."}
             </p>
           </div>
           <div className="flex items-center justify-between border-t border-[#A77C3D]/25 pt-5 text-[8px] uppercase tracking-[.28em] text-[#8D7958]">
@@ -106,7 +106,7 @@ export default function AuthPage({ mode = "login" }) {
           </form>
 
           <div className="mt-9 flex flex-wrap items-center justify-between gap-3 border-t border-[#A77C3D]/20 pt-6 text-[11px] text-[#9F927D]">
-            <span>{isRegister ? "Already a member?" : "New to Eman Jewelers?"}</span>
+            <span>{isRegister ? "Already a member?" : "New to Woodique?"}</span>
             <a className="inline-flex items-center gap-2 text-[#D9B879] transition hover:text-[#F6DFA8]" href={isRegister ? "/login" : "/register"}>
               {isRegister ? "Sign in" : "Create an account"} <ArrowUpRight size={13} />
             </a>
