@@ -24,19 +24,19 @@ function AppContent() {
   const [loading, setLoading] = useState(true);
   const transitionTimer = useRef(null);
   useEffect(() => {
-    const baseUrl = "https://emanjewelers.vercel.app";
+    const baseUrl = "https://woodique.vercel.app";
     const routeMeta = {
-      "/": { title: "Eman Jewelers | Fine Jewellery", description: "Discover elegant jewellery at Eman Jewelers. Explore thoughtfully selected pieces for everyday elegance and unforgettable moments.", index: true },
-      "/about": { title: "About Eman Jewelers | Our Story", description: "Discover the Eman Jewelers approach to thoughtful design, meaningful jewellery and a considered shopping experience.", index: true },
-      "/login": { title: "Login | Eman Jewelers", description: "Sign in to your Eman Jewelers account.", index: false },
-      "/register": { title: "Create Account | Eman Jewelers", description: "Create your Eman Jewelers account.", index: false },
-      "/account": { title: "My Account | Eman Jewelers", description: "Manage your Eman Jewelers account and delivery details.", index: false },
-      "/cart": { title: "Shopping Bag | Eman Jewelers", description: "Review your Eman Jewelers shopping bag.", index: false },
-      "/wishlist": { title: "Wishlist | Eman Jewelers", description: "View your saved jewellery at Eman Jewelers.", index: false }
+      "/": { title: "Woodique | Wooden Tray Sets", description: "Discover handcrafted wooden tray sets designed to bring warmth and function to your home.", index: true },
+      "/about": { title: "About Woodique | Our Story", description: "Discover Woodique’s approach to thoughtful woodworking, practical design and a considered shopping experience.", index: true },
+      "/login": { title: "Login | Woodique", description: "Sign in to your Woodique account.", index: false },
+      "/register": { title: "Create Account | Woodique", description: "Create your Woodique account.", index: false },
+      "/account": { title: "My Account | Woodique", description: "Manage your Woodique account and delivery details.", index: false },
+      "/cart": { title: "Shopping Bag | Woodique", description: "Review your Woodique shopping bag.", index: false },
+      "/wishlist": { title: "Wishlist | Woodique", description: "View your saved wooden pieces at Woodique.", index: false }
     };
     const productRoute = /^\/product\/[a-f0-9]{24}$/.test(path);
     const meta = routeMeta[path] || (productRoute
-      ? { title: "Jewellery Piece | Eman Jewelers", description: "Explore this jewellery piece at Eman Jewelers.", index: true }
+      ? { title: "Wooden Tray Set | Woodique", description: "Explore this wooden tray set at Woodique.", index: true }
       : routeMeta["/"]);
     document.title = meta.title;
     let description = document.querySelector('meta[name="description"]');
