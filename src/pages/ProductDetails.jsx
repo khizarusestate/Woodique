@@ -24,8 +24,8 @@ export default function ProductDetails({ productId }) {
   const total = useMemo(() => (product?.price || 0) * quantity, [product, quantity]);
   useEffect(() => {
     if (!product) return;
-    const title = `${product.name} | Eman Jewelers`;
-    const description = String(product.description || `Discover ${product.name} at Eman Jewelers.`).replace(/\\s+/g, " ").slice(0, 155);
+    const title = `${product.name} | Woodique`;
+    const description = String(product.description || `Discover ${product.name} at Woodique.`).replace(/\\s+/g, " ").slice(0, 155);
     document.title = title;
     const setMeta = (selector, attribute, value) => {
       let element = document.querySelector(selector);
@@ -43,7 +43,7 @@ export default function ProductDetails({ productId }) {
     setMeta('meta[property="og:image"]', "property", product.image || "");
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
-    canonical.href = `https://emanjewelers.vercel.app/product/${product.id}`;
+    canonical.href = `https://woodique.vercel.app/product/${product.id}`;
     let schema = document.getElementById("product-jsonld");
     if (!schema) { schema = document.createElement("script"); schema.id = "product-jsonld"; schema.type = "application/ld+json"; document.head.appendChild(schema); }
     schema.textContent = JSON.stringify({
@@ -72,7 +72,7 @@ export default function ProductDetails({ productId }) {
       const result = await request("/api/store/orders", { method: "POST", body: JSON.stringify({ items: [{ productId: product.id, quantity }] }) });
       const order = result.order;
       const message = [
-        "Assalam-o-Alaikum, I have placed an order at Eman Jewelers.",
+        "Assalam-o-Alaikum, I have placed an order at Woodique.",
         `Order: ${order.orderNumber}`,
         `Product: ${product.name}`,
         `Quantity: ${quantity}`,
@@ -97,10 +97,10 @@ export default function ProductDetails({ productId }) {
       <div className="grid items-start gap-8 md:gap-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-16">
         <motion.div initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} className="relative overflow-hidden border border-[#B98536]/70 bg-[#EAE3D5] p-[5px] shadow-xl">
           <div className="relative overflow-hidden"><span className="absolute left-3 top-3 z-10 border border-[#B98536]/30 bg-[#F7F3EA]/90 px-3 py-2 text-[9px] uppercase tracking-[0.2em] text-[#78531F]">{product.category}</span><button type="button" onClick={()=>toggleWishlist(product.id)} aria-label="Toggle wishlist" className="absolute right-3 top-3 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/70 bg-[#F7F3EA]/90 text-[#68481F]"><Heart size={18} fill={isWishlisted?"currentColor":"none"}/></button><img src={product.image} alt={product.name} className="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]"/></div>
-          <div className="flex justify-between border-t border-[#B98536]/25 bg-gradient-to-r from-[#F7F3EA] via-[#FFF9EA] to-[#F0E3C9] px-4 py-3 text-[9px] uppercase tracking-[0.15em] text-[#82745D]"><span>Signature collection</span><span>Made to be treasured</span></div>
+          <div className="flex justify-between border-t border-[#B98536]/25 bg-gradient-to-r from-[#F7F3EA] via-[#FFF9EA] to-[#F0E3C9] px-4 py-3 text-[9px] uppercase tracking-[0.15em] text-[#82745D]"><span>Woodique collection</span><span>Made to be treasured</span></div>
         </motion.div>
         <motion.section initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} className="lg:sticky lg:top-28">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#9A773F]">Eman Jewelers · Signature collection</p>
+          <p className="text-[10px] uppercase tracking-[0.3em] text-[#9A773F]">Woodique · Signature collection</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight tracking-[-.035em] sm:text-5xl">{product.name}</h1>
           <p className="mt-4 text-sm leading-7 text-[#756F63]">{product.description}</p>
           <p className="mt-6 text-2xl font-medium tracking-wide text-[#68481F]">{formatPrice(product.price)} <span className="text-xs font-normal text-[#8A806F]">/ piece</span></p>
