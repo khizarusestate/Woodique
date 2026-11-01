@@ -18,12 +18,20 @@ import {
 
 const EASE = [0.16, 1, 0.3, 1];
 
-/* Minimal brand mark; product imagery is intentionally omitted from the hero */
+/* Woodique hero product image */
 function Jewel() {
     return (
-        <Layers
-            strokeWidth={0.8}
-            className="relative z-10 h-1/2 w-1/2 text-[#D9B98C]"
+        <motion.img
+            src="./images/Home.png"
+            alt="Woodique wooden tray set"
+            className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_24px_rgba(185,138,88,0.28)]"
+            initial={{ opacity: 0, y: 18, scale: 0.92 }}
+            animate={{ opacity: 1, y: [0, -7, 0, 5, 0], scale: [1, 1.015, 1] }}
+            transition={{
+                opacity: { duration: 1.2, ease: "easeOut" },
+                y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+                scale: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+            }}
         />
     );
 }
