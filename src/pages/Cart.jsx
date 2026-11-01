@@ -23,7 +23,7 @@ export default function Cart() {
       const result = await request("/api/store/orders", { method: "POST", body: JSON.stringify({ items: lines.map(line => ({ productId: line.product.id, quantity: line.quantity })), delivery }) });
       const order = result.order;
       const message = [
-        "Assalam-o-Alaikum, I have placed an order at Eman Jewelers.",
+        "Assalam-o-Alaikum, I have placed an order at Woodique.",
         `Order: ${order.orderNumber}`,
         ...order.items.map(item => `${item.name} × ${item.quantity} — ${formatPrice(item.lineTotal)}`),
         `Total: ${formatPrice(order.total)}`,
@@ -32,8 +32,8 @@ export default function Cart() {
         `Address: ${delivery.address}, ${delivery.city}, ${delivery.country}`,
         "Please confirm my order and delivery."
       ].join("\n");
-      localStorage.setItem("eman-cart-v1", "[]");
-      window.dispatchEvent(new Event("eman-cart-cleared"));
+      localStorage.setItem("woodique-cart-v1", "[]");
+      window.dispatchEvent(new Event("woodique-cart-cleared"));
       toast("Order saved. Opening WhatsApp…", "success");
       const whatsappUrl = `https://wa.me/923177348178?text=${encodeURIComponent(message)}`;
       window.location.href = whatsappUrl;
