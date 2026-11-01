@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Heart, MessageCircle, ShieldCheck, ShoppingBag, Leaf } from "lucide-react";
 
@@ -14,20 +13,6 @@ const footerLinks = [
 
 export default function Footer() {
   const reduce = useReducedMotion();
-  const particles = useMemo(
-    () => Array.from({ length: reduce ? 14 : 38 }, (_, i) => ({
-      id: i,
-      left: `${(i * 37.7) % 100}%`,
-      top: `${(i * 61.3) % 100}%`,
-      size: i % 8 === 0 ? 3 : i % 3 === 0 ? 2 : 1,
-      duration: 6 + (i % 8) * 1.5,
-      delay: (i % 11) * -0.6,
-      x: ((i * 29) % 110) - 55,
-      y: ((i * 43) % 130) - 65,
-    })),
-    [reduce]
-  );
-
   return (
     <footer className="relative isolate overflow-hidden border-t border-[#A77A43]/30 bg-[#2B1B12] text-[#FFF1D8]">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -40,12 +25,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(36,24,15,.96)_0%,rgba(45,30,18,.86)_52%,rgba(29,20,13,.96)_100%)]" />
         <motion.div animate={reduce ? {} : { x: [0, 45, -20, 0], y: [0, -20, 24, 0] }} transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }} className="absolute -right-32 -top-48 h-[430px] w-[430px] rounded-full bg-[#E9BD70]/[.13] blur-[115px]" />
         <motion.div animate={reduce ? {} : { x: [0, -35, 20, 0], y: [0, 20, -15, 0] }} transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-52 -left-32 h-[390px] w-[390px] rounded-full bg-[#503522]/[.16] blur-[110px]" />
-        {particles.map((p) => (
-          <motion.div key={p.id} className="absolute rounded-full" style={{ left: p.left, top: p.top, width: p.size, height: p.size, background: p.id % 4 === 0 ? "#F5E2BD" : "#E9BD70", boxShadow: "0 0 9px 2px rgba(198,154,91,.38)" }}
-            animate={reduce ? { opacity: .35 } : { x: [0, p.x, 0], y: [0, p.y, 0], opacity: [.12, .65, .12], scale: [.7, 1.2, .7] }}
-            transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: "easeInOut" }}
-          />
-        ))}
+
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#E9BD70]/70 to-transparent" />
       </div>
 
