@@ -214,7 +214,7 @@ export default function Home() {
  
 
             {/* ================= Hero ================= */}
-            <section className="relative z-10 mx-auto flex h-full max-w-[1450px] items-center px-6 pb-[10vh] pt-[calc(3vh+75px)] sm:px-10 lg:px-16">
+            <section className="relative z-10 mx-auto flex h-full max-w-[1450px] items-center px-6 pb-[14vh] pt-[calc(3vh+75px)] sm:px-10 lg:px-16">
                 <div className="grid w-full items-center gap-[4vh] lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
 
                     {/* ---------- Copy ---------- */}
@@ -234,7 +234,7 @@ export default function Home() {
 
                         <h1
                             className="font-serif font-normal leading-[0.92] tracking-[-0.05em]"
-                            style={{ fontSize: "clamp(2.7rem, min(7.4vw, 12.5vh), 6.8rem)" }}
+                            style={{ fontSize: "clamp(2.45rem, min(6.6vw, 10.8vh), 6.1rem)" }}
                         >
                             <span className="block overflow-hidden pb-[0.06em]">
                                 <motion.span
