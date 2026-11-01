@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="relative isolate overflow-hidden border-t border-[#D7B36B]/20 bg-[#050403] text-[#F8F3E8]">
       {/* Ambient gold atmosphere */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Soft-focus signature jewel image, with a dark veil to keep footer copy readable */}
+        {/* Soft-focus brand image, with a dark veil to keep footer copy readable */}
         <motion.div
           className="absolute -inset-6 scale-[1.04] bg-cover bg-center bg-no-repeat blur-[12px]"
           style={{
@@ -124,13 +124,13 @@ export default function Footer() {
         {/* Footer directory */}
         <div className="grid gap-12 py-12 sm:py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_.7fr_1fr] lg:gap-16 lg:py-16">
           <div className="max-w-sm">
-            <a href="/" aria-label="Eman Jewelers home" className="group inline-flex items-center gap-3">
+            <a href="/" aria-label="Woodique home" className="group inline-flex items-center gap-3">
               <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D7B36B]/45 bg-[#F1C965]/[0.05] text-[#E8C77D] transition-all duration-500 group-hover:border-[#F1C965] group-hover:shadow-[0_0_25px_rgba(241,201,101,0.16)]">
                 <img src="/images/Logo.png" alt="" className="h-10 w-10 object-contain transition-transform duration-500 group-hover:scale-105" />
               </span>
               <span>
-                <span className="block font-serif text-[25px] leading-none tracking-[-0.035em] text-[#F8F0E1]">Eman Jewelers</span>
-                <span className="mt-2 block text-[8px] uppercase tracking-[0.29em] text-[#B78B42]">Fine jewellery · Thoughtfully chosen</span>
+                <span className="block font-serif text-[25px] leading-none tracking-[-0.035em] text-[#F8F0E1]">Woodique</span>
+                <span className="mt-2 block text-[8px] uppercase tracking-[0.29em] text-[#B78B42]">Wooden tray sets · Thoughtfully crafted</span>
               </span>
             </a>
             <p className="mt-6 max-w-xs text-[12px] leading-7 text-[#A99C85]">
@@ -171,7 +171,7 @@ export default function Footer() {
 
         {/* Closing signature */}
         <div className="flex flex-col gap-4 border-t border-[#D7B36B]/20 py-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[9px] tracking-[0.08em] text-[#827765]">© {new Date().getFullYear()} Eman Jewelers. All rights reserved.</p>
+          <p className="text-[9px] tracking-[0.08em] text-[#827765]">© {new Date().getFullYear()} Woodique. All rights reserved.</p>
           <div className="flex items-center gap-3 text-[9px] uppercase tracking-[0.2em] text-[#A99C85]">
             <span className="h-px w-7 bg-gradient-to-r from-transparent to-[#B78B42]" />
             Crafted to be remembered
