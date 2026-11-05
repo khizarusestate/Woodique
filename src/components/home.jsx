@@ -28,7 +28,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E9BD70]/50 to-transparent" />
       </div>
 
-      <section className="relative z-10 mx-auto flex min-h-screen h-auto max-w-[1550px] items-start px-5 pb-20 pt-[105px] sm:px-9 lg:h-full lg:min-h-0 lg:items-center lg:px-16 lg:pt-[calc(75px+3vh)]">
+      <section className="relative z-10 mx-auto flex min-h-screen h-auto max-w-[1550px] items-start px-5 pb-20 pt-[155px] sm:px-9 sm:pt-[165px] lg:h-full lg:min-h-0 lg:items-center lg:px-16 lg:pt-[calc(75px+3vh)]">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[.92fr_1.08fr] lg:gap-5">
           <div className="relative z-20 mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
             <motion.h1
