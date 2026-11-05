@@ -327,7 +327,6 @@ export default function Nav() {
 
                                 <div className="relative mt-auto pt-10">
                                     <div className="mb-3 h-px w-16 bg-gradient-to-r from-[#F1C965]/70 to-transparent" />
-                                    <p className="font-serif text-sm text-[#CD9135]">Crafted for everyday living</p>
                                 </div>
                             </div>
                         </motion.aside>
