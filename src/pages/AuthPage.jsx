@@ -62,14 +62,14 @@ export default function AuthPage({ mode = "login" }) {
             <span className="mb-6 block h-px w-12 bg-[#C39A52]" />
             <p className="mb-5 text-[9px] uppercase tracking-[.38em] text-[#B18A4A]">The Woodique experience</p>
             <h1 className="max-w-sm font-serif text-[54px] font-normal leading-[1.08] tracking-[-.035em] text-[#F8F0E1]">
-              {isRegister ? <>A world of<br /><i className="font-normal text-[#D8B879]">personal elegance.</i></> : <>Elegance,<br /><i className="font-normal text-[#D8B879]">remembered.</i></>}
+              {isRegister ? <>A world of<br /><i className="font-normal text-[#D8B879]">thoughtful living.</i></> : <>Warmth,<br /><i className="font-normal text-[#D8B879]">made personal.</i></>}
             </h1>
             <p className="mt-7 max-w-[270px] text-[12px] leading-7 tracking-[.04em] text-[#A99C85]">
               {isRegister ? "Create your private account and keep your Woodique experience close." : "Your personal space for a considered and effortless shopping experience."}
             </p>
           </div>
           <div className="flex items-center justify-between border-t border-[#A77C3D]/25 pt-5 text-[8px] uppercase tracking-[.28em] text-[#8D7958]">
-            <span>EMAN JEWELERS</span><span>EST. WITH CARE</span>
+            <span>WOODIQUE</span><span>CRAFTED FOR EVERYDAY LIVING</span>
           </div>
           <span className="pointer-events-none absolute -bottom-24 -right-20 font-serif text-[280px] leading-none text-[#C39A52]/[0.035]">E</span>
         </aside>
