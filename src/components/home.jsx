@@ -30,7 +30,7 @@ export default function Home() {
 
       <section className="relative z-10 mx-auto flex min-h-screen h-auto max-w-[1550px] items-start px-5 pb-20 pt-[155px] sm:px-9 sm:pt-[165px] lg:h-full lg:min-h-0 lg:items-center lg:px-16 lg:pt-[calc(75px+3vh)]">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[.92fr_1.08fr] lg:gap-5">
-          <div className="relative z-20 mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
+          <div className="relative z-20 order-2 mx-auto w-full max-w-2xl text-center lg:order-1 lg:mx-0 lg:text-left">
             <motion.h1
               initial={reduce ? false : { opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function Home() {
             initial={reduce ? false : { opacity: 0, scale: .96, x: 24 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1.05, delay: .12, ease: EASE }}
-            className="relative mx-auto flex w-full max-w-[760px] items-center justify-center py-5 sm:py-8 lg:min-h-[650px] lg:py-0"
+            className="relative order-1 mx-auto flex w-full max-w-[760px] items-center justify-center py-5 sm:py-8 lg:order-2 lg:min-h-[650px] lg:py-0"
           >
             <motion.div
               aria-hidden="true"
