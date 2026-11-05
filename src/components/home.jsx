@@ -6,7 +6,6 @@ import {
   BadgeCheck,
   Hammer,
   Layers,
-  Sparkles,
   Utensils,
 } from "lucide-react";
 
@@ -32,16 +31,6 @@ export default function Home() {
       <section className="relative z-10 mx-auto flex h-full max-w-[1550px] items-center px-5 pb-20 pt-[calc(75px+3vh)] sm:px-9 lg:px-16">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[.92fr_1.08fr] lg:gap-5">
           <div className="relative z-20 mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
-            <motion.div
-              initial={reduce ? false : { opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: EASE }}
-              className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#E9BD70]/25 bg-[#FFF1D8]/[.045] px-4 py-2.5 text-[9px] font-semibold uppercase tracking-[.24em] text-[#E9BD70] shadow-[0_8px_30px_rgba(0,0,0,.12)] backdrop-blur-sm sm:text-[10px]"
-            >
-              <Sparkles size={13} strokeWidth={1.5} />
-              The art of thoughtful living
-            </motion.div>
-
             <motion.h1
               initial={reduce ? false : { opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
