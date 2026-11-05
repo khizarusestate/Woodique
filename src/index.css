@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 
-/* Simple black cursor (thin gold edge so it stays visible on the dark theme) */
+/* Woodique global interaction and motion language */
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html,
 body {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2 L4 19 L8.5 15 L11.5 22 L14.5 20.7 L11.6 14 L17.5 14 Z' fill='%23000' stroke='%23F1C965' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
@@ -16,14 +24,9 @@ label[for],
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2 L4 19 L8.5 15 L11.5 22 L14.5 20.7 L11.6 14 L17.5 14 Z' fill='%23000' stroke='%23FFF1B8' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer !important;
 }
 
-/* Anchor links land below the fixed header */
 html {
   scroll-padding-top: 75px;
-}
-
-
-/* Custom champagne-gold browser scrollbar */
-html {
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #B98536 #100D08;
 }
@@ -46,4 +49,51 @@ html::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #FFF1B8 0%, #E2B95E 50%, #A66B22 100%);
+}
+
+/* Consistent, restrained micro-interactions */
+::selection {
+  color: #2B1B12;
+  background: #E9BD70;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: #C3914D;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion="lift"] {
+    transition: transform 450ms cubic-bezier(.16, 1, .3, 1), box-shadow 450ms ease;
+  }
+
+  [data-motion="lift"]:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }
