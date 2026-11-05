@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowLeft, Heart, Minus, Plus, Share2, ShieldCheck, Truck, ShoppingBag } from "lucide-react";
+import { ArrowLeft, Heart, Minus, Plus, Send, ShieldCheck, Truck, ShoppingBag } from "lucide-react";
 import { useShop } from "../context/ShopContext";
 import { useCatalog } from "../context/CatalogContext";
 import { useAuth } from "../context/AuthContext";
@@ -82,7 +82,7 @@ export default function ProductDetails({ productId }) {
         `Address: ${user.address}, ${user.city}`,
         "Please confirm availability and delivery."
       ].join("\n");
-      toast("Order saved successfully. Opening WhatsApp…", "success");
+      toast("Your order has been saved successfully.", "success");
       window.location.assign(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`);
     } catch (error) { toast(error.message, "error"); }
     finally { setBusy(false); }
@@ -108,8 +108,8 @@ export default function ProductDetails({ productId }) {
           <div className="space-y-5 text-sm"><div><p className="mb-1 text-[10px] uppercase tracking-[.18em] text-[#9A773F]">Details</p><p className="text-[#5F584D]">{product.material || "Crafted with care"}</p></div><div><p className="mb-1 text-[10px] uppercase tracking-[.18em] text-[#9A773F]">Care instructions</p><p className="leading-6 text-[#5F584D]">{product.care || "Keep away from chemicals and store carefully when not in use."}</p></div></div>
           <div className="mt-8 border-y border-[#B98536]/30 py-5"><div className="flex flex-wrap items-center justify-between gap-4"><label htmlFor="piece-quantity" className="text-[10px] uppercase tracking-[.18em] text-[#75664E]">Number of pieces</label><div className="flex items-center border border-[#C9BDA7] bg-white/60"><button type="button" onClick={()=>setQuantity(v=>Math.max(1,v-1))} disabled={quantity<=1} className="grid h-11 w-11 place-items-center"><Minus size={15}/></button><input id="piece-quantity" type="number" min="1" max="99" value={quantity} onChange={e=>setQuantity(Math.max(1,Math.min(99,Number(e.target.value)||1)))} className="h-11 w-14 border-x border-[#C9BDA7] bg-transparent text-center text-sm outline-none"/><button type="button" onClick={()=>setQuantity(v=>Math.min(99,v+1))} disabled={quantity>=99} className="grid h-11 w-11 place-items-center"><Plus size={15}/></button></div></div><div className="mt-5 flex items-end justify-between"><span className="text-[10px] uppercase tracking-[.18em] text-[#75664E]">Total price</span><strong className="font-serif text-2xl text-[#68481F]">{formatPrice(total)}</strong></div></div>
           <div className="mt-6 grid grid-cols-[1fr_auto] gap-3"><button type="button" onClick={()=>{addToCart(product.id,quantity);setAdded(true);}} className="flex min-h-14 items-center justify-center gap-2 border border-[#B98536]/50 bg-white/50 px-3 text-[10px] font-semibold uppercase tracking-[.15em]"><ShoppingBag size={16}/>{added?"Added to bag":cartLine?"Add more":"Add to bag"}</button><button type="button" onClick={()=>toggleWishlist(product.id)} aria-label="Toggle wishlist" className="grid min-h-14 min-w-14 place-items-center border border-[#B98536]/50 text-[#68481F]"><Heart size={19} fill={isWishlisted?"currentColor":"none"}/></button></div>
-          <button type="button" disabled={busy} onClick={handleOrder} className="mt-6 flex min-h-14 w-full items-center justify-center gap-3 bg-[#17130D] px-6 py-4 text-[10px] font-semibold uppercase tracking-[.22em] text-[#F8E9BE] disabled:opacity-60"><Share2 size={16}/>{busy?"Saving order…":"Order via WhatsApp"}</button>
-          <div className="mt-4 grid grid-cols-2 gap-3 text-[10px] leading-5 text-[#7D7465]"><div className="flex items-start gap-2"><ShieldCheck size={16} className="mt-0.5 shrink-0 text-[#9A773F]"/><span>Order saved securely before WhatsApp</span></div><div className="flex items-start gap-2"><Truck size={16} className="mt-0.5 shrink-0 text-[#9A773F]"/><span>Delivery details confirmed with you</span></div></div>
+          <button type="button" disabled={busy} onClick={handleOrder} className="mt-6 flex min-h-14 w-full items-center justify-center gap-3 bg-[#17130D] px-6 py-4 text-[10px] font-semibold uppercase tracking-[.22em] text-[#F8E9BE] disabled:opacity-60"><Send size={16}/>{busy?"Saving order…":"Send"}</button>
+          <div className="mt-4 grid grid-cols-2 gap-3 text-[10px] leading-5 text-[#7D7465]"><div className="flex items-start gap-2"><ShieldCheck size={16} className="mt-0.5 shrink-0 text-[#9A773F]"/><span>Order saved securely</span></div><div className="flex items-start gap-2"><Truck size={16} className="mt-0.5 shrink-0 text-[#9A773F]"/><span>Delivery details confirmed with you</span></div></div>
         </motion.section>
       </div>
     </div>
