@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main
       id="home"
-      className="relative min-h-[760px] h-[calc(92vh+75px)] w-full overflow-hidden bg-[#302015] text-white selection:bg-[#E9BD70] selection:text-[#24170D] lg:min-h-[720px]"
+      className="relative min-h-screen h-auto w-full overflow-hidden bg-[#302015] text-white selection:bg-[#E9BD70] selection:text-[#24170D] lg:min-h-[720px] lg:h-[calc(92vh+75px)]"
     >
       {/* Layered studio backdrop */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
@@ -28,7 +28,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E9BD70]/50 to-transparent" />
       </div>
 
-      <section className="relative z-10 mx-auto flex h-full max-w-[1550px] items-center px-5 pb-20 pt-[calc(75px+3vh)] sm:px-9 lg:px-16">
+      <section className="relative z-10 mx-auto flex min-h-screen h-auto max-w-[1550px] items-start px-5 pb-20 pt-[105px] sm:px-9 lg:h-full lg:min-h-0 lg:items-center lg:px-16 lg:pt-[calc(75px+3vh)]">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[.92fr_1.08fr] lg:gap-5">
           <div className="relative z-20 mx-auto w-full max-w-2xl text-center lg:mx-0 lg:text-left">
             <motion.h1
@@ -91,7 +91,7 @@ export default function Home() {
             initial={reduce ? false : { opacity: 0, scale: .96, x: 24 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1.05, delay: .12, ease: EASE }}
-            className="relative mx-auto flex w-full max-w-[760px] items-center justify-center lg:min-h-[650px]"
+            className="relative mx-auto flex w-full max-w-[760px] items-center justify-center py-5 sm:py-8 lg:min-h-[650px] lg:py-0"
           >
             <motion.div
               aria-hidden="true"
@@ -115,7 +115,7 @@ export default function Home() {
                 fetchPriority="high"
                 animate={reduce ? {} : { y: [0, -9, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 mx-auto max-h-[62vh] w-full object-contain drop-shadow-[0_32px_35px_rgba(0,0,0,.32)] sm:max-h-[68vh]"
+                className="relative z-10 mx-auto max-h-[38vh] w-full object-contain drop-shadow-[0_32px_35px_rgba(0,0,0,.32)] sm:max-h-[52vh] lg:max-h-[68vh]"
               />
               <div className="pointer-events-none absolute inset-[4%] z-20 border border-[#E9BD70]/20 [clip-path:polygon(0_0,18%_0,18%_1px,1px_1px,1px_18%,0_18%,0_0,100%_0,100%_18%,calc(100%_-_1px)_18%,calc(100%_-_1px)_1px,82%_1px,82%_0,100%_0,100%_100%,82%_100%,82%_calc(100%_-_1px),calc(100%_-_1px)_calc(100%_-_1px),calc(100%_-_1px)_82%,100%_82%,100%_100%,0_100%,0_82%,1px_82%,1px_calc(100%_-_1px),18%_calc(100%_-_1px),18%_100%)]" />
             </div>
