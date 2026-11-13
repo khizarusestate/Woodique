@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, MessageCircle, X, Leaf, Package, Phone } from "lucide-react";
+import { ArrowUpRight, MessageCircle, X, Leaf, Package } from "lucide-react";
 import { WHATSAPP_NUMBER } from "../data/contact";
 
 
