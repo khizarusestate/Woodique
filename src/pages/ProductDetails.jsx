@@ -68,8 +68,7 @@ export default function ProductDetails({ productId }) {
 
 
   const handleOrder = async () => {
-    if (!user) { window.location.assign("/login"); return; }
-    if (!user.phone || !user.address || !user.city) { toast("Please add your phone, delivery address and city in My Account first.", "error"); window.location.assign("/account"); return; }
+    if (!user || !user.phone || !user.address || !user.city) { addToCart(product.id, quantity); window.location.assign("/cart"); return; }
     setBusy(true);
     try {
       const result = await request("/api/store/orders", { method: "POST", body: JSON.stringify({ items: [{ productId: product.id, quantity }] }) });
