@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, MessageCircle, X, Leaf, Package, Phone } from "lucide-react";
+import { WHATSAPP_NUMBER } from "../data/contact";
 
-const WHATSAPP_NUMBER = "923177348178";
 
 export default function Contact({ onClose }) {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -23,7 +23,7 @@ export default function Contact({ onClose }) {
 
   const submit = (event) => {
     event.preventDefault();
-    const text = ["Hello Woodique,", "", "I would like to make an enquiry about your wooden tray sets.", "", `Name: ${form.name.trim()}`, `Phone: ${form.phone.trim()}`, "", "Message:", form.message.trim()].join("\\n");
+    const text = ["Hello Woodique,", "", "I would like to make an enquiry about your wooden tray sets.", "", `Name: ${form.name.trim()}`, `Phone: ${form.phone.trim()}`, "", "Message:", form.message.trim()].join("\n");
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
   };
 
