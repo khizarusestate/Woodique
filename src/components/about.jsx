@@ -46,6 +46,37 @@ export default function About() {
         </motion.div>
       </section>
 
+      {/* One-off craft exhibition — intentionally not connected to the shop catalogue */}
+      <section id="woodique-exhibition" className="relative overflow-hidden border-y border-[#E9BD70]/20 bg-[#241810] px-6 py-24 sm:px-10 md:py-32 lg:px-16">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#D5A85E]/10 blur-[110px]" />
+        <div className="relative mx-auto max-w-[1500px]">
+          <motion.div initial={reduce ? false : { opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+            <div><Eyebrow>A closer look · Woodique exhibition</Eyebrow><h2 className="max-w-3xl font-serif text-[clamp(2.5rem,5vw,4.8rem)] leading-[.98] tracking-[-.055em]">The beauty of <span className="italic text-[#E9BD70]">thoughtful craft.</span></h2></div>
+            <p className="max-w-sm text-sm leading-7 text-[#D8C5AD]">A study in natural grain, warm wood and considered details. Presented as a design showcase, not a store listing.</p>
+          </motion.div>
+          <div className="grid items-stretch gap-4 md:grid-cols-[1.12fr_.88fr] md:gap-5">
+            <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group relative min-h-[420px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[580px]">
+              <img src="/images/exhibition-tray-1.webp" alt="Nested wooden serving trays viewed from above, with brass handles" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/65 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[.24em] text-[#FFF1D8] sm:bottom-7 sm:left-7">01 / Form & finish</figcaption>
+            </motion.figure>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 md:gap-5">
+              <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .08 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
+                <img src="/images/exhibition-tray-2.webp" alt="Side view showing the wooden tray set construction and depth" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
+                <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">02 / Crafted profile</figcaption>
+              </motion.figure>
+              <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .16 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
+                <img src="/images/exhibition-tray-3.webp" alt="Wooden serving trays arranged together, highlighting natural grain and brass handles" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
+                <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">03 / Natural character</figcaption>
+              </motion.figure>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-[9px] uppercase tracking-[.22em] text-[#D8C5AD]/70">A Woodique design exhibition · Not available for purchase</p>
+        </div>
+      </section>
+
       <section className="relative border-y border-[#E9BD70]/15 bg-[#2F2016]">
         <div className="mx-auto grid max-w-[1500px] gap-10 px-6 py-20 sm:px-10 md:py-28 lg:grid-cols-[.7fr_1.3fr] lg:gap-20 lg:px-16 lg:py-32">
           <div><Eyebrow>The heart of Woodique</Eyebrow><p className="font-serif text-3xl leading-tight text-[#E9BD70] sm:text-4xl">Designed for the moments that make a home.</p></div>
