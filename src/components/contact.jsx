@@ -44,7 +44,7 @@ export default function Contact({ onClose }) {
             </div>
             <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" className="relative mt-10 inline-flex w-fit items-center gap-4 border-t border-[#E9BD70]/30 pt-5 text-[#E9BD70] transition hover:text-[#FFF1D8]">
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E9BD70]/40"><MessageCircle size={17} strokeWidth={1.4} /></span>
-              <span><span className="block text-[8px] uppercase tracking-[.25em] text-[#D8C5AD]">Call or message</span><span className="mt-1 block text-[12px] tracking-[.08em]">+92 323 6822384</span></span><ArrowUpRight size={15} />
+              <span><span className="block text-[8px] uppercase tracking-[.25em] text-[#D8C5AD]">Contact us</span><span className="mt-1 block text-[12px] tracking-[.08em]">+92 323 6822384</span></span><ArrowUpRight size={15} />
             </a>
           </div>
 
@@ -60,8 +60,8 @@ export default function Contact({ onClose }) {
                 <label className="block"><span className="mb-1 block text-[8px] uppercase tracking-[.23em] text-[#987044]">02 / Phone number</span><input className="w-full border-0 border-b border-[#A58A65]/50 bg-transparent px-0 py-3.5 text-[13px] tracking-wide text-[#2B1B12] outline-none placeholder:text-[#A18B70] focus:border-[#9A6B35] focus:ring-0" type="tel" name="phone" autoComplete="tel" inputMode="tel" placeholder="03XX XXXXXXX" value={form.phone} onChange={update} required maxLength={25} /></label>
                 <label className="block sm:col-span-2"><span className="mb-1 block text-[8px] uppercase tracking-[.23em] text-[#987044]">03 / Your message</span><textarea className="w-full min-h-[126px] resize-y border-0 border-b border-[#A58A65]/50 bg-transparent px-0 py-3.5 text-[13px] tracking-wide text-[#2B1B12] outline-none placeholder:text-[#A18B70] focus:border-[#9A6B35] focus:ring-0" name="message" placeholder="Tell us what you’re looking for..." value={form.message} onChange={update} required maxLength={1500} rows={4} /></label>
               </div>
-              <button type="submit" className="group mt-9 flex min-h-[56px] w-full items-center justify-between rounded-full bg-[#392719] px-6 text-[9px] font-semibold uppercase tracking-[.22em] text-[#F3D79F] transition duration-300 hover:bg-[#503522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9A6B35]"><span>Send</span><span className="flex items-center gap-3"><span className="hidden text-[8px] font-normal tracking-[.16em] text-[#D8C5AD] sm:inline">REVIEW & SEND</span><ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span></button>
-              <p className="mt-4 text-center text-[9px] leading-5 tracking-[.03em] text-[#806C55]">Your message will open in your messaging app, where you can review it before sending.</p>
+              <button type="submit" className="group mt-9 flex min-h-[56px] w-full items-center justify-between rounded-full bg-[#392719] px-6 text-[9px] font-semibold uppercase tracking-[.22em] text-[#F3D79F] transition duration-300 hover:bg-[#503522] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9A6B35]"><span>Send message</span><span className="flex items-center gap-3"><span className="hidden text-[8px] font-normal tracking-[.16em] text-[#D8C5AD] sm:inline">SUBMIT ENQUIRY</span><ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span></button>
+              <p className="mt-4 text-center text-[9px] leading-5 tracking-[.03em] text-[#806C55]">Please review your details before submitting your enquiry.</p>
             </motion.form>
           </div>
         </div>
