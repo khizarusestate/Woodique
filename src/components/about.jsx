@@ -46,7 +46,7 @@ export default function About() {
         </motion.div>
       </section>
 
-      {/* One-off craft exhibition — intentionally not connected to the shop catalogue */}
+      {/* Editorial exhibition photography — separate from the shop catalogue */}
       <section id="woodique-exhibition" className="relative overflow-hidden border-y border-[#E9BD70]/20 bg-[#241810] px-6 py-24 sm:px-10 md:py-32 lg:px-16">
         <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#D5A85E]/10 blur-[110px]" />
         <div className="relative mx-auto max-w-[1500px]">
@@ -56,24 +56,24 @@ export default function About() {
           </motion.div>
           <div className="grid items-stretch gap-4 md:grid-cols-[1.12fr_.88fr] md:gap-5">
             <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group relative min-h-[420px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[580px]">
-              <img src="/images/exhibition-tray-1.webp" alt="Nested wooden serving trays viewed from above, with brass handles" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+              <img src="https://images.unsplash.com/photo-1568616461622-18ac2a7391e0?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Warm wooden tray styled as a home decor feature" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/65 via-transparent to-transparent" />
               <figcaption className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[.24em] text-[#FFF1D8] sm:bottom-7 sm:left-7">01 / Form & finish</figcaption>
             </motion.figure>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 md:gap-5">
               <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .08 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
-                <img src="/images/exhibition-tray-2.webp" alt="Side view showing the wooden tray set construction and depth" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <img src="https://images.unsplash.com/photo-1524084848619-1161d3c8501a?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Close-up of a wooden serving tray and ceramic coffee cup" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">02 / Crafted profile</figcaption>
               </motion.figure>
               <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .16 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
-                <img src="/images/exhibition-tray-3.webp" alt="Wooden serving trays arranged together, highlighting natural grain and brass handles" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <img src="https://images.unsplash.com/photo-1758181560239-1e5ec8882781?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Sunlit wooden serving tray in a calm interior setting" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">03 / Natural character</figcaption>
               </motion.figure>
             </div>
           </div>
-          <p className="mt-6 text-center text-[9px] uppercase tracking-[.22em] text-[#D8C5AD]/70">A Woodique design exhibition · Not available for purchase</p>
+          <p className="mt-6 text-center text-[9px] uppercase tracking-[.22em] text-[#D8C5AD]/70">Editorial imagery · Unsplash · Not available for purchase</p>
         </div>
       </section>
 
