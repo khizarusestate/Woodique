@@ -18,10 +18,13 @@ export default function ProductDetails({ productId }) {
   const [quantity, setQuantity] = useState(1);
   const [busy, setBusy] = useState(false);
   const [added, setAdded] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
   const reduceMotion = useReducedMotion();
   const cartLine = product ? cart.find(item => String(item.id) === String(product.id)) : undefined;
   const isWishlisted = product ? wishlist.some(id => String(id) === String(product.id)) : false;
   const total = useMemo(() => (product?.price || 0) * quantity, [product, quantity]);
+  const galleryImages = useMemo(() => product ? [...new Set([product.image, ...(Array.isArray(product.images) ? product.images : [])].filter(Boolean))].slice(0, 8) : [], [product]);
+  useEffect(() => { setActiveImage(0); }, [productId]);
   useEffect(() => {
     if (!product) return;
     const title = `${product.name} | Woodique`;
@@ -96,7 +99,7 @@ export default function ProductDetails({ productId }) {
       <a href="/#collections" className="mb-7 inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.2em] text-[#75664E]"><ArrowLeft size={15}/> Back to collection</a>
       <div className="grid items-start gap-8 md:gap-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-16">
         <motion.div initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} className="relative overflow-hidden border border-[#B98536]/70 bg-[#EAE3D5] p-[5px] shadow-xl">
-          <div className="relative overflow-hidden"><span className="absolute left-3 top-3 z-10 border border-[#B98536]/30 bg-[#F7F3EA]/90 px-3 py-2 text-[9px] uppercase tracking-[0.2em] text-[#78531F]">{product.category}</span><button type="button" onClick={()=>toggleWishlist(product.id)} aria-label="Toggle wishlist" className="absolute right-3 top-3 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/70 bg-[#F7F3EA]/90 text-[#68481F]"><Heart size={18} fill={isWishlisted?"currentColor":"none"}/></button><img src={product.image} alt={product.name} className="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]"/></div>
+          <div className="relative overflow-hidden"><span className="absolute left-3 top-3 z-10 border border-[#B98536]/30 bg-[#F7F3EA]/90 px-3 py-2 text-[9px] uppercase tracking-[0.2em] text-[#78531F]">{product.category}</span><button type="button" onClick={()=>toggleWishlist(product.id)} aria-label="Toggle wishlist" className="absolute right-3 top-3 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/70 bg-[#F7F3EA]/90 text-[#68481F]"><Heart size={18} fill={isWishlisted?"currentColor":"none"}/></button><img src={galleryImages[activeImage] || product.image} alt={`${product.name} view ${activeImage+1}`} className="aspect-[4/5] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/5]" loading="eager"/></div>{galleryImages.length>1 && <div className="grid grid-cols-3 gap-3 p-3 sm:grid-cols-4">{galleryImages.map((src,index)=><button key={`${src}-${index}`} type="button" onClick={()=>setActiveImage(index)} aria-label={`View product image ${index+1}`} aria-pressed={activeImage===index} className={`overflow-hidden border-2 bg-[#EAE3D5] transition ${activeImage===index?"border-[#9A773F]":"border-transparent opacity-75 hover:opacity-100"}`}><img src={src} alt={`${product.name} thumbnail ${index+1}`} className="aspect-square w-full object-cover"/></button>)}</div>}
           <div className="flex justify-between border-t border-[#B98536]/25 bg-gradient-to-r from-[#F7F3EA] via-[#FFF9EA] to-[#F0E3C9] px-4 py-3 text-[9px] uppercase tracking-[0.15em] text-[#82745D]"><span>Woodique collection</span><span>Made to be treasured</span></div>
         </motion.div>
         <motion.section initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} className="lg:sticky lg:top-28">
