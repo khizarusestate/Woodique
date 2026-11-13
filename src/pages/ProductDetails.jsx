@@ -78,6 +78,7 @@ export default function ProductDetails({ productId }) {
         "Assalam-o-Alaikum, I have placed an order at Woodique.",
         `Order: ${order.orderNumber}`,
         `Product: ${product.name}`,
+        ...(product.image ? [`Product image: ${new URL(product.image, window.location.origin).href}`] : []),
         `Quantity: ${quantity}`,
         `Total: ${formatPrice(order.total)}`,
         `Name: ${user.name}`,
