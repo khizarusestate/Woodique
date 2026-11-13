@@ -147,7 +147,7 @@ export default function Nav() {
                 <nav className="relative z-10 mx-auto flex h-[110px] max-w-[1450px] items-center justify-between px-6 lg:px-12">
 
                     {/* Logo */}
-                    <a href="/" aria-label="Woodique home" className="group relative shrink-0">
+                    <a href="/" aria-label="Woodique home" className="group relative -ml-3 shrink-0 lg:-ml-6">
                         <img
                             src="/images/Logo.png"
                             alt="Woodique"
