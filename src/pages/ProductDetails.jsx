@@ -6,8 +6,8 @@ import { useCatalog } from "../context/CatalogContext";
 import { useAuth } from "../context/AuthContext";
 import { useToast } from "../components/ToastProvider";
 import { formatPrice } from "../data/products";
+import { WHATSAPP_NUMBER } from "../data/contact";
 
-const WHATSAPP_NUMBER = "923177348178";
 
 export default function ProductDetails({ productId }) {
   const { products, loading } = useCatalog();
