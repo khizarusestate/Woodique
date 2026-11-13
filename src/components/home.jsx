@@ -161,7 +161,7 @@ export default function Home() {
             <h2 className="max-w-xl font-serif text-[clamp(2.6rem,5vw,4.8rem)] leading-[.98] tracking-[-.055em]">Make room for <span className="italic text-[#E9BD70]">little rituals.</span></h2>
             <p className="mt-7 max-w-lg text-sm leading-8 text-[#D8C5AD] sm:text-base">A favourite cup, a quiet moment, and the natural warmth of wood. Our tray sets are made to bring a little more intention to the everyday.</p>
             <a href="#collections" className="group mt-8 inline-flex items-center gap-3 border-b border-[#E9BD70]/50 pb-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#F5DDB6] transition-colors hover:text-[#E9BD70]">Find your tray set <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
-            <p className="mt-8 text-[9px] uppercase tracking-[.18em] text-[#BDA88F]/70">Lifestyle inspiration · Photography by Kelly Sikkema on Unsplash</p>
+            <p className="mt-8 text-[9px] uppercase tracking-[.18em] text-[#BDA88F]/70">Tray styling reference · Image source: Objectry</p>
           </motion.div>
 
           <motion.figure
@@ -172,8 +172,8 @@ export default function Home() {
             className="group relative order-1 min-h-[340px] overflow-hidden border border-[#E9BD70]/25 bg-[#342419] sm:min-h-[520px] lg:order-2"
           >
             <img
-              src="https://images.unsplash.com/photo-1654124803541-bf14f80edadb?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=2200"
-              alt="Wooden tray styled with a notebook and coffee cup"
+              src="https://objectry.com/cdn/shop/products/ClassicTraySetDomeCoffeeTable_2048x2048.jpg?v=1712568732"
+              alt="Nested rectangular wooden tray set with polished brass handles styled on a coffee table"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.035]"
             />
