@@ -45,12 +45,9 @@ export default function Footer() {
         <div className="grid gap-12 py-12 sm:py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_.7fr_1fr] lg:gap-16 lg:py-16">
           <div className="max-w-sm">
             <a href="/" aria-label="Woodique home" className="group inline-flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E9BD70]/50 bg-[#E9BD70]/[.08]">
-                <img src="/images/Logo.png" alt="" className="h-10 w-10 object-contain transition-transform duration-500 group-hover:scale-105" />
-              </span>
-              <span>
-                <span className="block font-serif text-[25px] leading-none tracking-[-.035em] text-[#FFF1D8]">Woodique</span>
-                <span className="mt-2 block text-[8px] uppercase tracking-[.29em] text-[#E9BD70]">Wooden tray sets · Thoughtfully crafted</span>
+              <span className="flex min-w-0 flex-col items-start gap-2">
+                <img src="/images/Logo.png" alt="Woodique" className="h-auto w-44 max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]" />
+                <span className="text-[8px] uppercase tracking-[.29em] text-[#E9BD70]">Wooden tray sets · Thoughtfully crafted</span>
               </span>
             </a>
             <p className="mt-6 max-w-xs text-[12px] leading-7 text-[#EADBC8]">
