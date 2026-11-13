@@ -37,7 +37,7 @@ export default function Footer() {
             </p>
           </div>
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="group inline-flex min-h-[54px] w-fit items-center justify-between gap-8 rounded-sm border border-[#E9BD70]/60 bg-gradient-to-r from-[#E9BD70]/[.13] to-transparent px-5 py-4 text-[9px] font-semibold uppercase tracking-[.2em] text-[#FFF1D8] transition-all duration-500 hover:border-[#E2BD83] hover:bg-[#E9BD70]/[.2] hover:shadow-[0_0_35px_rgba(198,154,91,.12)] sm:px-6">
-            <span className="flex items-center gap-3"><MessageCircle size={17} strokeWidth={1.4} /> Talk to our team</span>
+            <span className="flex items-center gap-3"><MessageCircle size={17} strokeWidth={1.4} /> Contact us</span>
             <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
           </a>
         </motion.div>
