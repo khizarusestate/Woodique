@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag, Send } from "lucide-react";
 import { formatPrice } from "../data/products";
+import { WHATSAPP_NUMBER } from "../data/contact";
 import { useShop } from "../context/ShopContext";
 import { useCatalog } from "../context/CatalogContext";
 import { useAuth } from "../context/AuthContext";
@@ -35,7 +36,7 @@ export default function Cart() {
       localStorage.setItem("woodique-cart-v1", "[]");
       window.dispatchEvent(new Event("woodique-cart-cleared"));
       toast("Your order has been saved successfully.", "success");
-      const whatsappUrl = `https://wa.me/923177348178?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
       window.location.href = whatsappUrl;
     } catch (error) { toast(error.message, "error"); }
     finally { setBusy(false); }
