@@ -151,7 +151,7 @@ export default function Nav() {
                         <img
                             src="/images/Logo.png"
                             alt="Woodique"
-                            className="h-[104px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] lg:h-[144px]"
+                            className="h-[104px] w-auto translate-y-[5px] object-contain transition-transform duration-300 group-hover:scale-[1.03] lg:translate-y-0 lg:h-[144px]"
                         />
                     </a>
 
