@@ -26,7 +26,7 @@ export default function Cart() {
       const message = [
         "Assalam-o-Alaikum, I have placed an order at Woodique.",
         `Order: ${order.orderNumber}`,
-        ...lines.map(({ product, quantity }) => `${product.name} × ${quantity} — ${formatPrice(product.price * quantity)}${product.image ? `\\nProduct image: ${new URL(product.image, window.location.origin).href}` : ""}`),
+        ...lines.map(({ product, quantity }) => `${product.name} × ${quantity} — ${formatPrice(product.price * quantity)}${product.image ? `\nProduct image: ${new URL(product.image, window.location.origin).href}` : ""}`),
         `Total: ${formatPrice(order.total)}`,
         `Name: ${user.name}`,
         `Phone: ${delivery.phone}`,
