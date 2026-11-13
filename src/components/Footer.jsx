@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Heart, MessageCircle, ShieldCheck, ShoppingBag, Leaf } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/923177348178";
+const WHATSAPP_URL = "https://wa.me/923236822384";
 const EASE = [0.16, 1, 0.3, 1];
 
 const footerLinks = [
@@ -54,7 +54,7 @@ export default function Footer() {
               Natural warmth, considered details and beautiful pieces made to be part of your everyday moments.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-wide text-[#E9BD70] transition-colors hover:text-[#FFF1D8]">
-              <MessageCircle size={15} /> 0317 7348178 <ArrowUpRight size={12} />
+              <MessageCircle size={15} /> +92 323 6822384 <ArrowUpRight size={12} />
             </a>
           </div>
 
