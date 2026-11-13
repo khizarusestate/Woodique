@@ -46,6 +46,41 @@ export default function About() {
         </motion.div>
       </section>
 
+      {/* Lifestyle imagery is editorial inspiration, separate from product listings. */}
+      <section className="relative overflow-hidden border-y border-[#E9BD70]/20 bg-[#241810] px-5 py-20 text-[#FFF1D8] sm:px-9 md:py-28 lg:px-16">
+        <div className="mx-auto grid max-w-[1450px] items-center gap-9 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="order-2 lg:order-1"
+          >
+            <div className="mb-5 flex items-center gap-3 text-[10px] font-medium uppercase tracking-[.3em] text-[#D9B477]"><span className="h-px w-8 bg-current" /> The art of serving</div>
+            <h2 className="max-w-xl font-serif text-[clamp(2.6rem,5vw,4.8rem)] leading-[.98] tracking-[-.055em]">Make room for <span className="italic text-[#E9BD70]">little rituals.</span></h2>
+            <p className="mt-7 max-w-lg text-sm leading-8 text-[#D8C5AD] sm:text-base">A favourite cup, a quiet moment, and the natural warmth of wood. Our tray sets are made to bring a little more intention to the everyday.</p>
+            <a href="#collections" className="group mt-8 inline-flex items-center gap-3 border-b border-[#E9BD70]/50 pb-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#F5DDB6] transition-colors hover:text-[#E9BD70]">Find your tray set <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
+            <p className="mt-8 text-[9px] uppercase tracking-[.18em] text-[#BDA88F]/70">Tray styling reference · Image source: Objectry</p>
+          </motion.div>
+
+          <motion.figure
+            initial={reduce ? false : { opacity: 0, scale: .97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: .9, ease: EASE }}
+            className="group relative order-1 min-h-[340px] overflow-hidden border border-[#E9BD70]/25 bg-[#342419] sm:min-h-[520px] lg:order-2"
+          >
+            <img
+              src="https://objectry.com/cdn/shop/products/ClassicTraySetDomeCoffeeTable_2048x2048.jpg?v=1712568732"
+              alt="Nested rectangular wooden tray set with polished brass handles styled on a coffee table"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.035]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/35 via-transparent to-transparent" />
+            <figcaption className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[.24em] text-[#FFF1D8] sm:bottom-7 sm:left-7">A moment, thoughtfully arranged</figcaption>
+          </motion.figure>
+        </div>
+      </section>
+
       {/* Editorial exhibition photography — separate from the shop catalogue */}
       <section id="woodique-exhibition" className="relative overflow-hidden border-y border-[#E9BD70]/20 bg-[#241810] px-6 py-24 sm:px-10 md:py-32 lg:px-16">
         <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#D5A85E]/10 blur-[110px]" />
