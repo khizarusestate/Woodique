@@ -56,18 +56,18 @@ export default function About() {
           </motion.div>
           <div className="grid items-stretch gap-4 md:grid-cols-[1.12fr_.88fr] md:gap-5">
             <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group relative min-h-[420px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[580px]">
-              <img src="https://images.unsplash.com/photo-1568616461622-18ac2a7391e0?auto=format&fit=crop&fm=jpg&ixid=NHwxMjA3fDA%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Warm wooden tray styled as a home decor feature" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+              <img src="https://objectry.com/cdn/shop/products/ClassicTraySetDomeCoffeeTable_2048x2048.jpg?v=1712568732" alt="Warm wooden tray styled as a home decor feature" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/65 via-transparent to-transparent" />
               <figcaption className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[.24em] text-[#FFF1D8] sm:bottom-7 sm:left-7">01 / Form & finish</figcaption>
             </motion.figure>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 md:gap-5">
               <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .08 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
-                <img src="https://images.unsplash.com/photo-1524084848619-1161d3c8501a?auto=format&fit=crop&fm=jpg&ixid=NHwxMjA3fDA%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Close-up of a wooden serving tray and ceramic coffee cup" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <img src="https://www.craftcurve.in/cdn/shop/files/deco-wood-brass-handle-tray-xl_1.jpg?v=1735461157" alt="Close-up of a wooden serving tray and ceramic coffee cup" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">02 / Crafted profile</figcaption>
               </motion.figure>
               <motion.figure initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: .16 }} className="group relative min-h-[250px] overflow-hidden border border-[#E9BD70]/20 bg-[#342419] sm:min-h-[280px] md:min-h-0">
-                <img src="https://images.unsplash.com/photo-1758181560239-1e5ec8882781?auto=format&fit=crop&fm=jpg&ixid=NHwxMjA3fDA%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Sunlit wooden serving tray in a calm interior setting" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
+                <img src="https://shop.r10s.jp/dcxyakata/cabinet/12491583/12491590/imgrc0333880413.jpg" alt="Sunlit wooden serving tray in a calm interior setting" loading="lazy" referrerPolicy="no-referrer" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C120C]/60 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[.22em] text-[#FFF1D8]">03 / Natural character</figcaption>
               </motion.figure>
