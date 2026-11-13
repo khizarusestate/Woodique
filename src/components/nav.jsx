@@ -303,7 +303,7 @@ export default function Nav() {
                             <div className="relative flex min-h-full flex-col px-6 pb-8 pt-7">
                                 <div className="mb-8 flex items-center justify-between gap-3 border-b border-[#D7B36B]/25 pb-5">
                                     <a href="/" onClick={closeMenu} aria-label="Woodique home" className="flex min-w-0 items-center gap-3">
-                                        <img src="/images/Logo.png" alt="Woodique logo" className="h-11 w-11 shrink-0 rounded-full border border-[#D7B36B]/40 object-contain p-1" />
+                                        <img src="/images/Logo.png" alt="Woodique logo" className="h-auto w-36 max-w-[70%] shrink-0 object-contain" />
                                     </a>
                                     <button type="button" onClick={closeMenu} aria-label="Close menu" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#D7B36B]/30 text-[#F1C965] transition hover:border-[#F1C965]/70 hover:bg-[#F1C965]/10 hover:text-[#FFF1B8]"><X size={18} strokeWidth={1.7} /></button>
                                 </div>
