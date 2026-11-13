@@ -44,7 +44,7 @@ export default function Contact({ onClose }) {
             </div>
             <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" className="relative mt-10 inline-flex w-fit items-center gap-4 border-t border-[#E9BD70]/30 pt-5 text-[#E9BD70] transition hover:text-[#FFF1D8]">
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E9BD70]/40"><MessageCircle size={17} strokeWidth={1.4} /></span>
-              <span><span className="block text-[8px] uppercase tracking-[.25em] text-[#D8C5AD]">Call or message</span><span className="mt-1 block text-[12px] tracking-[.08em]">0317 7348178</span></span><ArrowUpRight size={15} />
+              <span><span className="block text-[8px] uppercase tracking-[.25em] text-[#D8C5AD]">Call or message</span><span className="mt-1 block text-[12px] tracking-[.08em]">+92 323 6822384</span></span><ArrowUpRight size={15} />
             </a>
           </div>
 
