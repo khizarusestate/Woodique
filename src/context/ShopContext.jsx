@@ -7,8 +7,8 @@ const readStored = (key, fallback) => {
 };
 
 export function ShopProvider({ children }) {
-  const [cart, setCart] = useState(() => readStored("woodique-cart-v1", readStored("eman-cart-v1", [])));
-  const [wishlist, setWishlist] = useState(() => readStored("woodique-wishlist-v1", readStored("eman-wishlist-v1", [])));
+  const [cart, setCart] = useState(() => readStored("woodique-cart-v1", []));
+  const [wishlist, setWishlist] = useState(() => readStored("woodique-wishlist-v1", []));
   useEffect(() => { try { localStorage.setItem("woodique-cart-v1", JSON.stringify(cart)); } catch {} }, [cart]);
   useEffect(() => { try { localStorage.setItem("woodique-wishlist-v1", JSON.stringify(wishlist)); } catch {} }, [wishlist]);
   useEffect(() => { const clear = () => setCart([]); window.addEventListener("woodique-cart-cleared", clear); return () => window.removeEventListener("woodique-cart-cleared", clear); }, []);
